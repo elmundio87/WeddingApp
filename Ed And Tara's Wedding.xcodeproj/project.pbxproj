@@ -14,6 +14,7 @@
 		4817D9BB1B63D0A70050CC8A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4817D9BA1B63D0A70050CC8A /* Images.xcassets */; };
 		4817D9BE1B63D0A70050CC8A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4817D9BC1B63D0A70050CC8A /* LaunchScreen.xib */; };
 		4817D9CA1B63D0A70050CC8A /* Ed_And_Tara_s_WeddingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4817D9C91B63D0A70050CC8A /* Ed_And_Tara_s_WeddingTests.swift */; };
+		4817D9D41B63D8D70050CC8A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4817D9D31B63D8D70050CC8A /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		4817D9C31B63D0A70050CC8A /* Ed And Tara's WeddingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ed And Tara's WeddingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4817D9C81B63D0A70050CC8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4817D9C91B63D0A70050CC8A /* Ed_And_Tara_s_WeddingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ed_And_Tara_s_WeddingTests.swift; sourceTree = "<group>"; };
+		4817D9D31B63D8D70050CC8A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4817D9D41B63D8D70050CC8A /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +64,7 @@
 		4817D9A31B63D0A70050CC8A = {
 			isa = PBXGroup;
 			children = (
+				4817D9D31B63D8D70050CC8A /* MapKit.framework */,
 				4817D9AE1B63D0A70050CC8A /* Ed And Tara's Wedding */,
 				4817D9C61B63D0A70050CC8A /* Ed And Tara's WeddingTests */,
 				4817D9AD1B63D0A70050CC8A /* Products */,
