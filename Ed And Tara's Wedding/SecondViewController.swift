@@ -13,6 +13,7 @@ import CoreLocation
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
+    var manager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,8 @@ class SecondViewController: UIViewController {
         region.span.longitudeDelta = 0.011;
         
         mapView.setRegion(region, animated: true);
+        
+        manager.requestWhenInUseAuthorization()
         
     }
 
