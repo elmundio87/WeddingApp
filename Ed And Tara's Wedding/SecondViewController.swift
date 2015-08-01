@@ -21,7 +21,26 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // create a region and pass it to the Map View
+        goToHatfieldHouse();
+        
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestAlwaysAuthorization()
+        manager.startUpdatingLocation()
+        manager.requestWhenInUseAuthorization()
+        
+        var hatfieldHouseAnnotation = MKPointAnnotation()
+        hatfieldHouseAnnotation.coordinate = CLLocationCoordinate2DMake(51.760453, -0.209228);
+        hatfieldHouseAnnotation.title = "The Old Palace";
+        hatfieldHouseAnnotation.subtitle = "Hatfield House";
+        //locations.append(hatfieldHouseAnnotation)
+        mapView.addAnnotation(hatfieldHouseAnnotation);
+    
+        mapView.showsUserLocation = true
+        
+    }
+    
+    @IBAction func goToHatfieldHouse(){
+        
         var region = MKCoordinateRegion();
         region.center.latitude = 51.760453;
         region.center.longitude = -0.209228;
@@ -30,12 +49,22 @@ class SecondViewController: UIViewController {
         
         mapView.setRegion(region, animated: true);
         
-        manager.requestWhenInUseAuthorization()
-        
     }
     
     @IBAction func goToMyLocation(){
-
+        var userLoc: CLLocation
+        var userCoordinate: CLLocationCoordinate2D!
+        userLoc = mapView.userLocation.location;
+        userCoordinate = userLoc.coordinate;
+        
+        var region = MKCoordinateRegion();
+        region.center.latitude = userCoordinate.latitude;
+        region.center.longitude = userCoordinate.longitude;
+        region.span.latitudeDelta = 0.011;
+        region.span.longitudeDelta = 0.011;
+        
+        mapView.setRegion(region, animated: true);
+        
     }
 
     override func didReceiveMemoryWarning() {
