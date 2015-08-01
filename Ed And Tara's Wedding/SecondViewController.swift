@@ -13,6 +13,8 @@ import CoreLocation
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var myLocation: UIButton!
+    
     var manager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -30,6 +32,10 @@ class SecondViewController: UIViewController {
         
         manager.requestWhenInUseAuthorization()
         
+    }
+    
+    @IBAction func goToMyLocation(){
+
     }
 
     override func didReceiveMemoryWarning() {
