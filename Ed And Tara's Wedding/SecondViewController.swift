@@ -10,12 +10,12 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var myLocation: UIButton!
     
-    var manager = CLLocationManager()
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,20 +23,32 @@ class SecondViewController: UIViewController {
         
         goToHatfieldHouse();
         
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.requestAlwaysAuthorization()
-        manager.startUpdatingLocation()
-        manager.requestWhenInUseAuthorization()
+        locationManager.requestWhenInUseAuthorization()
         
+        if(CLLocationManager.locationServicesEnabled()){
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+
         var hatfieldHouseAnnotation = MKPointAnnotation()
         hatfieldHouseAnnotation.coordinate = CLLocationCoordinate2DMake(51.760453, -0.209228);
         hatfieldHouseAnnotation.title = "The Old Palace";
         hatfieldHouseAnnotation.subtitle = "Hatfield House";
-        //locations.append(hatfieldHouseAnnotation)
+
         mapView.addAnnotation(hatfieldHouseAnnotation);
     
         mapView.showsUserLocation = true
         
+    }
+    
+    func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
+        println("locations = \(locations)")
+        println("success")
+    }
+    
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!){
+        println("Error: " + error.localizedDescription)
     }
     
     @IBAction func goToHatfieldHouse(){
@@ -54,16 +66,23 @@ class SecondViewController: UIViewController {
     @IBAction func goToMyLocation(){
         var userLoc: CLLocation
         var userCoordinate: CLLocationCoordinate2D!
-        userLoc = mapView.userLocation.location;
-        userCoordinate = userLoc.coordinate;
         
-        var region = MKCoordinateRegion();
-        region.center.latitude = userCoordinate.latitude;
-        region.center.longitude = userCoordinate.longitude;
-        region.span.latitudeDelta = 0.011;
-        region.span.longitudeDelta = 0.011;
-        
-        mapView.setRegion(region, animated: true);
+        if locationManager.location != nil {
+            println("\(locationManager.location.coordinate.latitude), \(locationManager.location.coordinate.longitude)")
+            userLoc = mapView.userLocation.location;
+            userCoordinate = userLoc.coordinate;
+            
+            var region = MKCoordinateRegion();
+            region.center.latitude = userCoordinate.latitude;
+            region.center.longitude = userCoordinate.longitude;
+            region.span.latitudeDelta = 0.011;
+            region.span.longitudeDelta = 0.011;
+            
+            mapView.setRegion(region, animated: true);
+
+        } else {
+            println("locationManager.location is nil")
+        }
         
     }
 
