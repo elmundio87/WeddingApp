@@ -69,7 +69,7 @@ class SecondViewController: UIViewController, CLLocationManagerDelegate {
         
         if locationManager.location != nil {
             println("\(locationManager.location.coordinate.latitude), \(locationManager.location.coordinate.longitude)")
-            userLoc = mapView.userLocation.location;
+            userLoc = locationManager.location;
             userCoordinate = userLoc.coordinate;
             
             var region = MKCoordinateRegion();
