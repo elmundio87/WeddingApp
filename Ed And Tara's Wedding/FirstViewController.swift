@@ -12,7 +12,7 @@ class FirstViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
     
-    var urlPath = "http://goo.gl/forms/M6g53EQEai"
+    var urlPath = "https://goo.gl/forms/M6g53EQEai"
     
     func loadAddressUrl() {
         let requestUrl = NSURL(string: urlPath)
