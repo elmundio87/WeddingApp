@@ -15,6 +15,8 @@
 		4817D9BE1B63D0A70050CC8A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4817D9BC1B63D0A70050CC8A /* LaunchScreen.xib */; };
 		4817D9CA1B63D0A70050CC8A /* Ed_And_Tara_s_WeddingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4817D9C91B63D0A70050CC8A /* Ed_And_Tara_s_WeddingTests.swift */; };
 		4817D9D41B63D8D70050CC8A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4817D9D31B63D8D70050CC8A /* MapKit.framework */; };
+		481E6EBB1BEDEA2500DEE347 /* info.html in Resources */ = {isa = PBXBuildFile; fileRef = 481E6EBA1BEDEA2500DEE347 /* info.html */; };
+		481E6EBD1BEDEB2D00DEE347 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481E6EBC1BEDEB2D00DEE347 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		4817D9C81B63D0A70050CC8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4817D9C91B63D0A70050CC8A /* Ed_And_Tara_s_WeddingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ed_And_Tara_s_WeddingTests.swift; sourceTree = "<group>"; };
 		4817D9D31B63D8D70050CC8A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		481E6EBA1BEDEA2500DEE347 /* info.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = info.html; sourceTree = "<group>"; };
+		481E6EBC1BEDEB2D00DEE347 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +90,12 @@
 				4817D9B11B63D0A70050CC8A /* AppDelegate.swift */,
 				4817D9B31B63D0A70050CC8A /* FirstViewController.swift */,
 				4817D9B51B63D0A70050CC8A /* SecondViewController.swift */,
+				481E6EBC1BEDEB2D00DEE347 /* InfoViewController.swift */,
 				4817D9B71B63D0A70050CC8A /* Main.storyboard */,
 				4817D9BA1B63D0A70050CC8A /* Images.xcassets */,
 				4817D9BC1B63D0A70050CC8A /* LaunchScreen.xib */,
 				4817D9AF1B63D0A70050CC8A /* Supporting Files */,
+				481E6EBA1BEDEA2500DEE347 /* info.html */,
 			);
 			path = "Ed And Tara's Wedding";
 			sourceTree = "<group>";
@@ -201,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				481E6EBB1BEDEA2500DEE347 /* info.html in Resources */,
 				4817D9B91B63D0A70050CC8A /* Main.storyboard in Resources */,
 				4817D9BE1B63D0A70050CC8A /* LaunchScreen.xib in Resources */,
 				4817D9BB1B63D0A70050CC8A /* Images.xcassets in Resources */,
@@ -223,6 +230,7 @@
 			files = (
 				4817D9B61B63D0A70050CC8A /* SecondViewController.swift in Sources */,
 				4817D9B21B63D0A70050CC8A /* AppDelegate.swift in Sources */,
+				481E6EBD1BEDEB2D00DEE347 /* InfoViewController.swift in Sources */,
 				4817D9B41B63D0A70050CC8A /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
