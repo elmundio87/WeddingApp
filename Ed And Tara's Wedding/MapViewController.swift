@@ -8,7 +8,7 @@
 
 import UIKit
 
-let image = "map.png"
+let image = "map.jpg"
 var imageView: UIImageView!
 var scrollView: UIScrollView!
 
@@ -18,16 +18,23 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         // 1
         imageView = UIImageView(image: UIImage(named: image))
+
         // 2
         scrollView = UIScrollView(frame: view.bounds)
-        scrollView.backgroundColor = UIColor.blackColor()
+        scrollView.backgroundColor = UIColor.whiteColor()
         // 3
-    
-        scrollView.contentSize = imageView.bounds.size
+        print(imageView.bounds.width)
+        
+        if(view.bounds.width <= 490){
+            scrollView.contentSize = imageView.bounds.size
+        }else{
+            scrollView.contentSize = view.bounds.size
+            imageView.contentMode = .ScaleAspectFit
+        }
+        
         // 4
         scrollView.addSubview(imageView)
         view.addSubview(scrollView)
-        
         
         imageView.frame = CGRectMake(0, 0, scrollView.contentSize.width, scrollView.contentSize.height)
         scrollView.maximumZoomScale = 5.0

@@ -18,7 +18,7 @@
 		481E6EBB1BEDEA2500DEE347 /* info.html in Resources */ = {isa = PBXBuildFile; fileRef = 481E6EBA1BEDEA2500DEE347 /* info.html */; };
 		481E6EBD1BEDEB2D00DEE347 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481E6EBC1BEDEB2D00DEE347 /* InfoViewController.swift */; };
 		481E6EBF1BEDF75A00DEE347 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481E6EBE1BEDF75A00DEE347 /* MapViewController.swift */; };
-		481E6EC11BEDF7F600DEE347 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 481E6EC01BEDF7F600DEE347 /* map.png */; };
+		48417D0A1BEE3DA700994918 /* map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48417D091BEE3DA700994918 /* map.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 		481E6EBA1BEDEA2500DEE347 /* info.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = info.html; sourceTree = "<group>"; };
 		481E6EBC1BEDEB2D00DEE347 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		481E6EBE1BEDF75A00DEE347 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		481E6EC01BEDF7F600DEE347 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		48417D091BEE3DA700994918 /* map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = map.jpg; path = "Ed And Tara's Wedding/map.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +72,7 @@
 		4817D9A31B63D0A70050CC8A = {
 			isa = PBXGroup;
 			children = (
+				48417D091BEE3DA700994918 /* map.jpg */,
 				4817D9D31B63D8D70050CC8A /* MapKit.framework */,
 				4817D9AE1B63D0A70050CC8A /* Ed And Tara's Wedding */,
 				4817D9C61B63D0A70050CC8A /* Ed And Tara's WeddingTests */,
@@ -91,7 +92,6 @@
 		4817D9AE1B63D0A70050CC8A /* Ed And Tara's Wedding */ = {
 			isa = PBXGroup;
 			children = (
-				481E6EC01BEDF7F600DEE347 /* map.png */,
 				4817D9B11B63D0A70050CC8A /* AppDelegate.swift */,
 				481E6EBE1BEDF75A00DEE347 /* MapViewController.swift */,
 				4817D9B31B63D0A70050CC8A /* FirstViewController.swift */,
@@ -217,7 +217,7 @@
 				4817D9B91B63D0A70050CC8A /* Main.storyboard in Resources */,
 				4817D9BE1B63D0A70050CC8A /* LaunchScreen.xib in Resources */,
 				4817D9BB1B63D0A70050CC8A /* Images.xcassets in Resources */,
-				481E6EC11BEDF7F600DEE347 /* map.png in Resources */,
+				48417D0A1BEE3DA700994918 /* map.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
