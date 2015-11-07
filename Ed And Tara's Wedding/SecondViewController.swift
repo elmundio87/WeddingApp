@@ -42,13 +42,8 @@ class SecondViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
-        println("locations = \(locations)")
-        println("success")
-    }
-    
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!){
-        println("Error: " + error.localizedDescription)
+        print("Error: " + error.localizedDescription)
     }
     
     @IBAction func goToHatfieldHouse(){
@@ -68,8 +63,8 @@ class SecondViewController: UIViewController, CLLocationManagerDelegate {
         var userCoordinate: CLLocationCoordinate2D!
         
         if locationManager.location != nil {
-            println("\(locationManager.location.coordinate.latitude), \(locationManager.location.coordinate.longitude)")
-            userLoc = locationManager.location;
+            print("\(locationManager.location!.coordinate.latitude), \(locationManager.location!.coordinate.longitude)")
+            userLoc = locationManager.location!;
             userCoordinate = userLoc.coordinate;
             
             var region = MKCoordinateRegion();
@@ -81,7 +76,7 @@ class SecondViewController: UIViewController, CLLocationManagerDelegate {
             mapView.setRegion(region, animated: true);
 
         } else {
-            println("locationManager.location is nil")
+            print("locationManager.location is nil")
         }
         
     }
