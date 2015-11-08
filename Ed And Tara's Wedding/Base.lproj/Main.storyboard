@@ -68,32 +68,34 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Epi-Kp-QtM">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Epi-Kp-QtM">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="475"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="opn-rd-CXl">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="475"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="opn-rd-CXl">
+                                        <rect key="frame" x="51" y="125" width="219" height="226"/>
                                         <animations/>
                                     </imageView>
                                 </subviews>
                                 <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="opn-rd-CXl" firstAttribute="top" secondItem="Epi-Kp-QtM" secondAttribute="top" id="9sM-nQ-g3O"/>
-                                    <constraint firstItem="opn-rd-CXl" firstAttribute="leading" secondItem="Epi-Kp-QtM" secondAttribute="leading" id="Q9a-Kf-Pwa"/>
-                                    <constraint firstAttribute="bottom" secondItem="opn-rd-CXl" secondAttribute="bottom" id="Uqh-NR-wWO"/>
-                                    <constraint firstAttribute="trailing" secondItem="opn-rd-CXl" secondAttribute="trailing" id="Vxo-Ay-bFX"/>
+                                    <constraint firstItem="opn-rd-CXl" firstAttribute="top" secondItem="Epi-Kp-QtM" secondAttribute="top" constant="250" id="9sM-nQ-g3O"/>
+                                    <constraint firstItem="opn-rd-CXl" firstAttribute="leading" secondItem="Epi-Kp-QtM" secondAttribute="leading" constant="250" id="Q9a-Kf-Pwa"/>
+                                    <constraint firstItem="opn-rd-CXl" firstAttribute="bottom" secondItem="Epi-Kp-QtM" secondAttribute="bottom" constant="-1" id="Uqh-NR-wWO"/>
+                                    <constraint firstItem="opn-rd-CXl" firstAttribute="trailing" secondItem="Epi-Kp-QtM" secondAttribute="trailing" constant="-1" id="Vxo-Ay-bFX"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Epi-Kp-QtM" secondAttribute="trailing" id="4JS-fh-oWr"/>
                             <constraint firstItem="FRX-Dw-aIY" firstAttribute="width" secondItem="G62-Cj-eiF" secondAttribute="width" id="4ap-am-Rl0"/>
-                            <constraint firstItem="Epi-Kp-QtM" firstAttribute="top" secondItem="Ca2-xr-hwK" secondAttribute="bottom" constant="-20" id="VCb-6A-a8w"/>
+                            <constraint firstItem="Epi-Kp-QtM" firstAttribute="top" secondItem="Ca2-xr-hwK" secondAttribute="bottom" id="VCb-6A-a8w"/>
                             <constraint firstItem="FRX-Dw-aIY" firstAttribute="centerX" secondItem="G62-Cj-eiF" secondAttribute="centerX" id="gVp-jB-lzJ"/>
-                            <constraint firstItem="Thr-bX-QrC" firstAttribute="top" secondItem="Epi-Kp-QtM" secondAttribute="bottom" constant="44" id="oTY-Cw-NfE"/>
+                            <constraint firstItem="Epi-Kp-QtM" firstAttribute="bottom" secondItem="Thr-bX-QrC" secondAttribute="top" constant="-44" id="lpJ-rr-sbP"/>
+                            <constraint firstItem="Epi-Kp-QtM" firstAttribute="leading" secondItem="G62-Cj-eiF" secondAttribute="leading" id="ppD-YM-m4q"/>
                             <constraint firstItem="FRX-Dw-aIY" firstAttribute="bottom" secondItem="Thr-bX-QrC" secondAttribute="top" id="sHa-Ha-U09"/>
-                            <constraint firstItem="Epi-Kp-QtM" firstAttribute="width" secondItem="G62-Cj-eiF" secondAttribute="width" id="zZ7-yf-OK4"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="Treasure Map-25.png" selectedImage="Treasure Map-25.png" id="cPa-gy-q4n"/>

@@ -9,17 +9,20 @@
 import UIKit
 import MapKit
 
-let imageScrollLargeImageName = "map.jpg"
+let imageScrollLargeImageName = "map.png"
 
 
 class MapViewController: UIViewController, UIScrollViewDelegate {
+
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageView: UIImageView!
+
     
     @IBOutlet weak var imageConstraintRight: NSLayoutConstraint!
     @IBOutlet weak var imageConstraintBottom: NSLayoutConstraint!
     @IBOutlet weak var imageConstraintLeft: NSLayoutConstraint!
     @IBOutlet weak var imageConstraintTop: NSLayoutConstraint!
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var scrollView: UIScrollView!
+
    
     var lastZoomScale: CGFloat = -1
     
@@ -31,11 +34,27 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
         updateZoom()
     }
     
-    // Update zoom scale and constraints
-    // It will also animate because willAnimateRotationToInterfaceOrientation
-    // is called from within an animation block
+    // Update zoom scale and constraints with animation.
+    @available(iOS 8.0, *)
+    override func viewWillTransitionToSize(size: CGSize,
+        withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+            
+            super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+            
+            coordinator.animateAlongsideTransition({ [weak self] _ in
+                self?.updateZoom()
+                }, completion: nil)
+    }
+    
     //
-    // DEPRECATION NOTICE: This method is said to be deprecated in iOS 8.0. But it still works.
+    // Update zoom scale and constraints with animation on iOS 7.
+    //
+    // DEPRECATION NOTICE:
+    //
+    // This method is deprecated in iOS 8.0 and it is here just for iOS 7.
+    // You can safely remove this method if you are not supporting iOS 7.
+    // Or if you do support iOS 7 you can leave it here as it will be ignored by the newer iOS versions.
+    //
     override func willAnimateRotationToInterfaceOrientation(
         toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
             
@@ -48,10 +67,10 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
             let imageWidth = image.size.width
             let imageHeight = image.size.height
             
-            let viewWidth = view.bounds.size.width
-            let viewHeight = view.bounds.size.height
+            let viewWidth = scrollView.bounds.size.width
+            let viewHeight = scrollView.bounds.size.height
             
-            // center image if it is smaller than screen
+            // center image if it is smaller than the scroll view
             var hPadding = (viewWidth - scrollView.zoomScale * imageWidth) / 2
             if hPadding < 0 { hPadding = 0 }
             
@@ -64,16 +83,15 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
             imageConstraintTop.constant = vPadding
             imageConstraintBottom.constant = vPadding
             
-            // Makes zoom out animation smooth and starting from the right point not from (0, 0)
             view.layoutIfNeeded()
         }
     }
     
-    // Zoom to show as much image as possible unless image is smaller than screen
+    // Zoom to show as much image as possible unless image is smaller than the scroll view
     private func updateZoom() {
         if let image = imageView.image {
-            var minZoom = min(view.bounds.size.width / image.size.width,
-                view.bounds.size.height / image.size.height)
+            var minZoom = min(scrollView.bounds.size.width / image.size.width,
+                scrollView.bounds.size.height / image.size.height)
             
             if minZoom > 1 { minZoom = 1 }
             
@@ -86,7 +104,6 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
             lastZoomScale = minZoom
         }
     }
-    
     
     // UIScrollViewDelegate
     // -----------------------

@@ -17,7 +17,6 @@
 		481E6EBB1BEDEA2500DEE347 /* info.html in Resources */ = {isa = PBXBuildFile; fileRef = 481E6EBA1BEDEA2500DEE347 /* info.html */; };
 		481E6EBD1BEDEB2D00DEE347 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481E6EBC1BEDEB2D00DEE347 /* InfoViewController.swift */; };
 		481E6EBF1BEDF75A00DEE347 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481E6EBE1BEDF75A00DEE347 /* MapViewController.swift */; };
-		48417D0A1BEE3DA700994918 /* map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48417D091BEE3DA700994918 /* map.jpg */; };
 		48417D161BEF447B00994918 /* About-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 48417D101BEF447B00994918 /* About-25.png */; };
 		48417D171BEF447B00994918 /* Ask Question-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 48417D111BEF447B00994918 /* Ask Question-25.png */; };
 		48417D181BEF447B00994918 /* Info-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 48417D121BEF447B00994918 /* Info-25.png */; };
@@ -32,6 +31,7 @@
 		48417D2B1BEF53CF00994918 /* ring-310299_640.png in Resources */ = {isa = PBXBuildFile; fileRef = 48417D231BEF53CF00994918 /* ring-310299_640.png */; };
 		48417D2C1BEF53CF00994918 /* silver-wedding-ring-clipart-silver-wedding-rings-clip-art-mn5gwdks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48417D241BEF53CF00994918 /* silver-wedding-ring-clipart-silver-wedding-rings-clip-art-mn5gwdks.jpg */; };
 		48417D2D1BEF53CF00994918 /* Wedding App Icon.psd in Resources */ = {isa = PBXBuildFile; fileRef = 48417D251BEF53CF00994918 /* Wedding App Icon.psd */; };
+		48417D351BEF936400994918 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 48417D341BEF936400994918 /* map.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +59,6 @@
 		481E6EBA1BEDEA2500DEE347 /* info.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = info.html; sourceTree = "<group>"; };
 		481E6EBC1BEDEB2D00DEE347 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		481E6EBE1BEDF75A00DEE347 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		48417D091BEE3DA700994918 /* map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = map.jpg; path = "Ed And Tara's Wedding/map.jpg"; sourceTree = "<group>"; };
 		48417D101BEF447B00994918 /* About-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "About-25.png"; path = "Tab Bar Icons/About-25.png"; sourceTree = "<group>"; };
 		48417D111BEF447B00994918 /* Ask Question-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ask Question-25.png"; path = "Tab Bar Icons/Ask Question-25.png"; sourceTree = "<group>"; };
 		48417D121BEF447B00994918 /* Info-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Info-25.png"; path = "Tab Bar Icons/Info-25.png"; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 		48417D231BEF53CF00994918 /* ring-310299_640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ring-310299_640.png"; sourceTree = "<group>"; };
 		48417D241BEF53CF00994918 /* silver-wedding-ring-clipart-silver-wedding-rings-clip-art-mn5gwdks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "silver-wedding-ring-clipart-silver-wedding-rings-clip-art-mn5gwdks.jpg"; sourceTree = "<group>"; };
 		48417D251BEF53CF00994918 /* Wedding App Icon.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wedding App Icon.psd"; sourceTree = "<group>"; };
+		48417D341BEF936400994918 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,6 @@
 		4817D9A31B63D0A70050CC8A = {
 			isa = PBXGroup;
 			children = (
-				48417D091BEE3DA700994918 /* map.jpg */,
 				4817D9D31B63D8D70050CC8A /* MapKit.framework */,
 				4817D9AE1B63D0A70050CC8A /* Ed And Tara's Wedding */,
 				4817D9C61B63D0A70050CC8A /* Ed And Tara's WeddingTests */,
@@ -118,6 +117,7 @@
 		4817D9AE1B63D0A70050CC8A /* Ed And Tara's Wedding */ = {
 			isa = PBXGroup;
 			children = (
+				48417D341BEF936400994918 /* map.png */,
 				4817D9B11B63D0A70050CC8A /* AppDelegate.swift */,
 				481E6EBE1BEDF75A00DEE347 /* MapViewController.swift */,
 				4817D9B31B63D0A70050CC8A /* FirstViewController.swift */,
@@ -269,6 +269,7 @@
 				48417D281BEF53CF00994918 /* icon-167.png in Resources */,
 				48417D2D1BEF53CF00994918 /* Wedding App Icon.psd in Resources */,
 				48417D2C1BEF53CF00994918 /* silver-wedding-ring-clipart-silver-wedding-rings-clip-art-mn5gwdks.jpg in Resources */,
+				48417D351BEF936400994918 /* map.png in Resources */,
 				4817D9B91B63D0A70050CC8A /* Main.storyboard in Resources */,
 				48417D2B1BEF53CF00994918 /* ring-310299_640.png in Resources */,
 				48417D191BEF447B00994918 /* Message-25.png in Resources */,
@@ -277,7 +278,6 @@
 				48417D261BEF53CF00994918 /* icon-120.png in Resources */,
 				48417D171BEF447B00994918 /* Ask Question-25.png in Resources */,
 				48417D181BEF447B00994918 /* Info-25.png in Resources */,
-				48417D0A1BEE3DA700994918 /* map.jpg in Resources */,
 				48417D291BEF53CF00994918 /* icon-180.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
