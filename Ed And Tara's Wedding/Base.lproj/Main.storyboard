@@ -52,11 +52,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="syt-2Y-XKY">
-                                <rect key="frame" x="0.0" y="0.0" width="325" height="475"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </containerView>
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRX-Dw-aIY">
                                 <rect key="frame" x="2" y="475" width="320" height="44"/>
                                 <animations/>
@@ -73,18 +68,42 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Epi-Kp-QtM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="475"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="opn-rd-CXl">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="475"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="opn-rd-CXl" firstAttribute="top" secondItem="Epi-Kp-QtM" secondAttribute="top" id="9sM-nQ-g3O"/>
+                                    <constraint firstItem="opn-rd-CXl" firstAttribute="leading" secondItem="Epi-Kp-QtM" secondAttribute="leading" id="Q9a-Kf-Pwa"/>
+                                    <constraint firstAttribute="bottom" secondItem="opn-rd-CXl" secondAttribute="bottom" id="Uqh-NR-wWO"/>
+                                    <constraint firstAttribute="trailing" secondItem="opn-rd-CXl" secondAttribute="trailing" id="Vxo-Ay-bFX"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FRX-Dw-aIY" firstAttribute="width" secondItem="G62-Cj-eiF" secondAttribute="width" id="4ap-am-Rl0"/>
+                            <constraint firstItem="Epi-Kp-QtM" firstAttribute="top" secondItem="Ca2-xr-hwK" secondAttribute="bottom" constant="-20" id="VCb-6A-a8w"/>
                             <constraint firstItem="FRX-Dw-aIY" firstAttribute="centerX" secondItem="G62-Cj-eiF" secondAttribute="centerX" id="gVp-jB-lzJ"/>
+                            <constraint firstItem="Thr-bX-QrC" firstAttribute="top" secondItem="Epi-Kp-QtM" secondAttribute="bottom" constant="44" id="oTY-Cw-NfE"/>
                             <constraint firstItem="FRX-Dw-aIY" firstAttribute="bottom" secondItem="Thr-bX-QrC" secondAttribute="top" id="sHa-Ha-U09"/>
+                            <constraint firstItem="Epi-Kp-QtM" firstAttribute="width" secondItem="G62-Cj-eiF" secondAttribute="width" id="zZ7-yf-OK4"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="Treasure Map-25.png" selectedImage="Treasure Map-25.png" id="cPa-gy-q4n"/>
                     <connections>
-                        <outlet property="containerView" destination="syt-2Y-XKY" id="2yP-36-rhR"/>
+                        <outlet property="imageConstraintBottom" destination="Uqh-NR-wWO" id="Mn1-fN-Oit"/>
+                        <outlet property="imageConstraintLeft" destination="Q9a-Kf-Pwa" id="bal-bm-0jF"/>
+                        <outlet property="imageConstraintRight" destination="Vxo-Ay-bFX" id="xd2-jK-rYn"/>
+                        <outlet property="imageConstraintTop" destination="9sM-nQ-g3O" id="3Sg-Jw-Cb8"/>
+                        <outlet property="imageView" destination="opn-rd-CXl" id="4y7-Ci-NfK"/>
+                        <outlet property="scrollView" destination="Epi-Kp-QtM" id="fNm-VS-2eJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
