@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48173A751BEFE1A40082E372 /* hatfield house.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48173A741BEFE1A40082E372 /* hatfield house.jpg */; };
 		4817D9B21B63D0A70050CC8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4817D9B11B63D0A70050CC8A /* AppDelegate.swift */; };
 		4817D9B41B63D0A70050CC8A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4817D9B31B63D0A70050CC8A /* FirstViewController.swift */; };
 		4817D9B91B63D0A70050CC8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4817D9B71B63D0A70050CC8A /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48173A741BEFE1A40082E372 /* hatfield house.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "hatfield house.jpg"; path = "Ed And Tara's Wedding/hatfield house.jpg"; sourceTree = "<group>"; };
 		4817D9AC1B63D0A70050CC8A /* Ed And Tara's Wedding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ed And Tara's Wedding.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4817D9B01B63D0A70050CC8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4817D9B11B63D0A70050CC8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		4817D9A31B63D0A70050CC8A = {
 			isa = PBXGroup;
 			children = (
+				48173A741BEFE1A40082E372 /* hatfield house.jpg */,
 				4817D9D31B63D8D70050CC8A /* MapKit.framework */,
 				4817D9AE1B63D0A70050CC8A /* Ed And Tara's Wedding */,
 				4817D9C61B63D0A70050CC8A /* Ed And Tara's WeddingTests */,
@@ -270,6 +273,7 @@
 				48417D2D1BEF53CF00994918 /* Wedding App Icon.psd in Resources */,
 				48417D2C1BEF53CF00994918 /* silver-wedding-ring-clipart-silver-wedding-rings-clip-art-mn5gwdks.jpg in Resources */,
 				48417D351BEF936400994918 /* map.png in Resources */,
+				48173A751BEFE1A40082E372 /* hatfield house.jpg in Resources */,
 				4817D9B91B63D0A70050CC8A /* Main.storyboard in Resources */,
 				48417D2B1BEF53CF00994918 /* ring-310299_640.png in Resources */,
 				48417D191BEF447B00994918 /* Message-25.png in Resources */,
