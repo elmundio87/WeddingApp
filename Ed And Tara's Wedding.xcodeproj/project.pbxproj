@@ -25,6 +25,14 @@
 		48417D191BEF447B00994918 /* Message-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 48417D131BEF447B00994918 /* Message-25.png */; };
 		48417D1A1BEF447B00994918 /* Reply-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 48417D141BEF447B00994918 /* Reply-25.png */; };
 		48417D1B1BEF447B00994918 /* Treasure Map-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 48417D151BEF447B00994918 /* Treasure Map-25.png */; };
+		48417D261BEF53CF00994918 /* icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 48417D1E1BEF53CF00994918 /* icon-120.png */; };
+		48417D271BEF53CF00994918 /* icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = 48417D1F1BEF53CF00994918 /* icon-152.png */; };
+		48417D281BEF53CF00994918 /* icon-167.png in Resources */ = {isa = PBXBuildFile; fileRef = 48417D201BEF53CF00994918 /* icon-167.png */; };
+		48417D291BEF53CF00994918 /* icon-180.png in Resources */ = {isa = PBXBuildFile; fileRef = 48417D211BEF53CF00994918 /* icon-180.png */; };
+		48417D2A1BEF53CF00994918 /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 48417D221BEF53CF00994918 /* icon-76.png */; };
+		48417D2B1BEF53CF00994918 /* ring-310299_640.png in Resources */ = {isa = PBXBuildFile; fileRef = 48417D231BEF53CF00994918 /* ring-310299_640.png */; };
+		48417D2C1BEF53CF00994918 /* silver-wedding-ring-clipart-silver-wedding-rings-clip-art-mn5gwdks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48417D241BEF53CF00994918 /* silver-wedding-ring-clipart-silver-wedding-rings-clip-art-mn5gwdks.jpg */; };
+		48417D2D1BEF53CF00994918 /* Wedding App Icon.psd in Resources */ = {isa = PBXBuildFile; fileRef = 48417D251BEF53CF00994918 /* Wedding App Icon.psd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +68,14 @@
 		48417D131BEF447B00994918 /* Message-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Message-25.png"; path = "Tab Bar Icons/Message-25.png"; sourceTree = "<group>"; };
 		48417D141BEF447B00994918 /* Reply-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Reply-25.png"; path = "Tab Bar Icons/Reply-25.png"; sourceTree = "<group>"; };
 		48417D151BEF447B00994918 /* Treasure Map-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Treasure Map-25.png"; path = "Tab Bar Icons/Treasure Map-25.png"; sourceTree = "<group>"; };
+		48417D1E1BEF53CF00994918 /* icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-120.png"; sourceTree = "<group>"; };
+		48417D1F1BEF53CF00994918 /* icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-152.png"; sourceTree = "<group>"; };
+		48417D201BEF53CF00994918 /* icon-167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-167.png"; sourceTree = "<group>"; };
+		48417D211BEF53CF00994918 /* icon-180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-180.png"; sourceTree = "<group>"; };
+		48417D221BEF53CF00994918 /* icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-76.png"; sourceTree = "<group>"; };
+		48417D231BEF53CF00994918 /* ring-310299_640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ring-310299_640.png"; sourceTree = "<group>"; };
+		48417D241BEF53CF00994918 /* silver-wedding-ring-clipart-silver-wedding-rings-clip-art-mn5gwdks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "silver-wedding-ring-clipart-silver-wedding-rings-clip-art-mn5gwdks.jpg"; sourceTree = "<group>"; };
+		48417D251BEF53CF00994918 /* Wedding App Icon.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wedding App Icon.psd"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +137,7 @@
 		4817D9AF1B63D0A70050CC8A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				48417D1D1BEF53CF00994918 /* Wedding App Icon */,
 				48417D101BEF447B00994918 /* About-25.png */,
 				48417D111BEF447B00994918 /* Ask Question-25.png */,
 				48417D121BEF447B00994918 /* Info-25.png */,
@@ -147,6 +164,21 @@
 				4817D9C81B63D0A70050CC8A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48417D1D1BEF53CF00994918 /* Wedding App Icon */ = {
+			isa = PBXGroup;
+			children = (
+				48417D1E1BEF53CF00994918 /* icon-120.png */,
+				48417D1F1BEF53CF00994918 /* icon-152.png */,
+				48417D201BEF53CF00994918 /* icon-167.png */,
+				48417D211BEF53CF00994918 /* icon-180.png */,
+				48417D221BEF53CF00994918 /* icon-76.png */,
+				48417D231BEF53CF00994918 /* ring-310299_640.png */,
+				48417D241BEF53CF00994918 /* silver-wedding-ring-clipart-silver-wedding-rings-clip-art-mn5gwdks.jpg */,
+				48417D251BEF53CF00994918 /* Wedding App Icon.psd */,
+			);
+			path = "Wedding App Icon";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,16 +264,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				48417D161BEF447B00994918 /* About-25.png in Resources */,
+				48417D2A1BEF53CF00994918 /* icon-76.png in Resources */,
+				48417D271BEF53CF00994918 /* icon-152.png in Resources */,
 				48417D1B1BEF447B00994918 /* Treasure Map-25.png in Resources */,
 				48417D1A1BEF447B00994918 /* Reply-25.png in Resources */,
 				481E6EBB1BEDEA2500DEE347 /* info.html in Resources */,
+				48417D281BEF53CF00994918 /* icon-167.png in Resources */,
+				48417D2D1BEF53CF00994918 /* Wedding App Icon.psd in Resources */,
+				48417D2C1BEF53CF00994918 /* silver-wedding-ring-clipart-silver-wedding-rings-clip-art-mn5gwdks.jpg in Resources */,
 				4817D9B91B63D0A70050CC8A /* Main.storyboard in Resources */,
+				48417D2B1BEF53CF00994918 /* ring-310299_640.png in Resources */,
 				48417D191BEF447B00994918 /* Message-25.png in Resources */,
 				4817D9BE1B63D0A70050CC8A /* LaunchScreen.xib in Resources */,
 				4817D9BB1B63D0A70050CC8A /* Images.xcassets in Resources */,
+				48417D261BEF53CF00994918 /* icon-120.png in Resources */,
 				48417D171BEF447B00994918 /* Ask Question-25.png in Resources */,
 				48417D181BEF447B00994918 /* Info-25.png in Resources */,
 				48417D0A1BEE3DA700994918 /* map.jpg in Resources */,
+				48417D291BEF53CF00994918 /* icon-180.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
