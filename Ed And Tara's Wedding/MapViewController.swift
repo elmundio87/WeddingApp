@@ -89,6 +89,8 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
     
     // Zoom to show as much image as possible unless image is smaller than the scroll view
     private func updateZoom() {
+        
+        if imageView != nil{
         if let image = imageView.image {
             var minZoom = min(scrollView.bounds.size.width / image.size.width,
                 scrollView.bounds.size.height / image.size.height)
@@ -102,6 +104,7 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
             
             scrollView.zoomScale = minZoom
             lastZoomScale = minZoom
+        }
         }
     }
     
