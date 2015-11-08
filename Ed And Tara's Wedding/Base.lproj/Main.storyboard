@@ -44,7 +44,42 @@
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="MapViewController" customModule="Ed_And_Tara_s_Wedding" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ca2-xr-hwK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Thr-bX-QrC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G62-Cj-eiF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRX-Dw-aIY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem id="62i-Gn-fj8">
+                                        <barButtonItem key="rightBarButtonItem" title="Open In Maps" id="KNN-Q6-ImO"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="syt-2Y-XKY">
+                                <rect key="frame" x="0.0" y="44" width="325" height="475"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="aek-Ax-Tnw" kind="embed" id="Ftb-Rs-Jbm"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FRX-Dw-aIY" firstAttribute="width" secondItem="G62-Cj-eiF" secondAttribute="width" id="jNn-T6-seP"/>
+                        </constraints>
+                    </view>
                     <tabBarItem key="tabBarItem" title="Map" image="second" selectedImage="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="containerView" destination="syt-2Y-XKY" id="2yP-36-rhR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,6 +161,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5Fe-HJ-6nc">
+            <objects>
+                <viewController id="aek-Ax-Tnw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jvr-tk-zmo">
+                        <rect key="frame" x="0.0" y="0.0" width="325" height="475"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8KE-Eu-Mjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
