@@ -60,9 +60,6 @@
                             <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRX-Dw-aIY">
                                 <rect key="frame" x="2" y="475" width="320" height="44"/>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="7EX-jj-8uf"/>
-                                </constraints>
                                 <items>
                                     <navigationItem id="62i-Gn-fj8">
                                         <barButtonItem key="rightBarButtonItem" title="Open in Maps" style="done" id="KNN-Q6-ImO">
@@ -77,10 +74,10 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="syt-2Y-XKY" firstAttribute="top" secondItem="Ca2-xr-hwK" secondAttribute="bottom" id="9IS-v8-10t"/>
-                            <constraint firstItem="syt-2Y-XKY" firstAttribute="bottom" secondItem="Thr-bX-QrC" secondAttribute="top" id="b4G-FW-Ksc"/>
-                            <constraint firstItem="FRX-Dw-aIY" firstAttribute="bottom" secondItem="Thr-bX-QrC" secondAttribute="top" id="ebH-xJ-eaf"/>
-                            <constraint firstItem="FRX-Dw-aIY" firstAttribute="width" secondItem="G62-Cj-eiF" secondAttribute="width" id="jNn-T6-seP"/>
+                            <constraint firstItem="FRX-Dw-aIY" firstAttribute="width" secondItem="G62-Cj-eiF" secondAttribute="width" id="4ap-am-Rl0"/>
+                            <constraint firstItem="syt-2Y-XKY" firstAttribute="bottom" secondItem="Thr-bX-QrC" secondAttribute="top" constant="-44" id="cZQ-9c-1YS"/>
+                            <constraint firstItem="syt-2Y-XKY" firstAttribute="bottom" secondItem="FRX-Dw-aIY" secondAttribute="top" id="fDb-Jr-PvS"/>
+                            <constraint firstItem="FRX-Dw-aIY" firstAttribute="bottom" secondItem="Thr-bX-QrC" secondAttribute="top" id="sHa-Ha-U09"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="Treasure Map-25.png" selectedImage="Treasure Map-25.png" id="cPa-gy-q4n"/>

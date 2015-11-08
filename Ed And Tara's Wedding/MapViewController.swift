@@ -28,6 +28,11 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
         redraw()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        redraw()
+    }
+    
     func redraw(){
         for subview in containerView.subviews {
             subview.removeFromSuperview()
