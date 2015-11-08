@@ -52,9 +52,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRX-Dw-aIY">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <containerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="syt-2Y-XKY">
+                                <rect key="frame" x="0.0" y="0.0" width="325" height="475"/>
                                 <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </containerView>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRX-Dw-aIY">
+                                <rect key="frame" x="2" y="475" width="320" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7EX-jj-8uf"/>
+                                </constraints>
                                 <items>
                                     <navigationItem id="62i-Gn-fj8">
                                         <barButtonItem key="rightBarButtonItem" title="Open in Maps" style="done" id="KNN-Q6-ImO">
@@ -65,15 +73,13 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="syt-2Y-XKY">
-                                <rect key="frame" x="0.0" y="44" width="325" height="475"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </containerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="syt-2Y-XKY" firstAttribute="top" secondItem="Ca2-xr-hwK" secondAttribute="bottom" id="9IS-v8-10t"/>
+                            <constraint firstItem="syt-2Y-XKY" firstAttribute="bottom" secondItem="Thr-bX-QrC" secondAttribute="top" id="b4G-FW-Ksc"/>
+                            <constraint firstItem="FRX-Dw-aIY" firstAttribute="bottom" secondItem="Thr-bX-QrC" secondAttribute="top" id="ebH-xJ-eaf"/>
                             <constraint firstItem="FRX-Dw-aIY" firstAttribute="width" secondItem="G62-Cj-eiF" secondAttribute="width" id="jNn-T6-seP"/>
                         </constraints>
                     </view>
