@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 let image = "map.jpg"
 var imageView: UIImageView!
@@ -15,7 +16,7 @@ var scrollView: UIScrollView!
 class MapViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var containerView: UIView!
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         redraw()
@@ -66,7 +67,17 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
         return imageView
     }
     
-    
+    @IBAction func openMapForPlace(sender: AnyObject) {
+        let regionDistance: CLLocationDistance = 500
+        let coordinates = CLLocationCoordinate2DMake(51.760453, -0.209228);
+        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(MKCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(MKCoordinateSpan: regionSpan.span)
+        ]
+        
+        MKMapItem.openMapsWithItems([], launchOptions: options)
+    }
     
     
 }

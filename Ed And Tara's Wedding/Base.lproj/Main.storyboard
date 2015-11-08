@@ -57,7 +57,11 @@
                                 <animations/>
                                 <items>
                                     <navigationItem id="62i-Gn-fj8">
-                                        <barButtonItem key="rightBarButtonItem" title="Open In Maps" id="KNN-Q6-ImO"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Open In Maps" id="KNN-Q6-ImO">
+                                            <connections>
+                                                <action selector="openMapForPlace:" destination="8rJ-Kc-sve" id="GRS-HU-qnH"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
