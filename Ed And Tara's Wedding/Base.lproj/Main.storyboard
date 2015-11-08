@@ -52,14 +52,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <containerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="syt-2Y-XKY">
+                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="syt-2Y-XKY">
                                 <rect key="frame" x="0.0" y="0.0" width="325" height="475"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </containerView>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRX-Dw-aIY">
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRX-Dw-aIY">
                                 <rect key="frame" x="2" y="475" width="320" height="44"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1Ic-aL-1wf"/>
+                                </constraints>
                                 <items>
                                     <navigationItem id="62i-Gn-fj8">
                                         <barButtonItem key="rightBarButtonItem" title="Open in Maps" style="done" id="KNN-Q6-ImO">
@@ -75,8 +78,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FRX-Dw-aIY" firstAttribute="width" secondItem="G62-Cj-eiF" secondAttribute="width" id="4ap-am-Rl0"/>
-                            <constraint firstItem="syt-2Y-XKY" firstAttribute="bottom" secondItem="Thr-bX-QrC" secondAttribute="top" constant="-44" id="cZQ-9c-1YS"/>
-                            <constraint firstItem="syt-2Y-XKY" firstAttribute="bottom" secondItem="FRX-Dw-aIY" secondAttribute="top" id="fDb-Jr-PvS"/>
+                            <constraint firstItem="FRX-Dw-aIY" firstAttribute="centerX" secondItem="G62-Cj-eiF" secondAttribute="centerX" id="gVp-jB-lzJ"/>
                             <constraint firstItem="FRX-Dw-aIY" firstAttribute="bottom" secondItem="Thr-bX-QrC" secondAttribute="top" id="sHa-Ha-U09"/>
                         </constraints>
                     </view>

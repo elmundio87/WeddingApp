@@ -42,7 +42,7 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
         
         // 2
         scrollView = UIScrollView(frame: view.bounds)
-        scrollView.backgroundColor = UIColor.whiteColor()
+        scrollView.backgroundColor = UIColor.blackColor()
         // 3
         
         if(view.bounds.width <= 490 ){
