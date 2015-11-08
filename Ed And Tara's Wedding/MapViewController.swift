@@ -52,9 +52,16 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
         containerView.addSubview(scrollView)
         
         imageView.frame = CGRectMake(0, 0, scrollView.contentSize.width, scrollView.contentSize.height)
+   
         scrollView.maximumZoomScale = 5.0
         scrollView.minimumZoomScale = 0.5
         scrollView.delegate = self
+        
+        
+        
+        let scrollPoint = CGPointMake(50, 0.0)
+        scrollView.setContentOffset(scrollPoint, animated: false)
+        
     }
  
     
