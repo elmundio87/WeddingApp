@@ -60,6 +60,7 @@ class FirstViewController: UIViewController, UIWebViewDelegate {
         loaded = true
         loadingView.hidden = true
         timer.invalidate()
+        webView.stringByEvaluatingJavaScriptFromString("document.getElementsByClassName('ss-footer')[0].style.display = 'none'")
     }
 
     func webViewDidStartLoad(webView: UIWebView) {
