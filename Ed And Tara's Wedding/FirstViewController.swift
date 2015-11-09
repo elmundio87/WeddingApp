@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import QuartzCore
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, UIWebViewDelegate {
 
+    @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var webView: UIWebView!
     
     var urlPath = "https://goo.gl/forms/M6g53EQEai"
@@ -23,6 +25,8 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        webView.delegate = self
+        loadingView.layer.cornerRadius = 10.0
         loadAddressUrl()
     }
 
@@ -31,6 +35,10 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    func webViewDidFinishLoad(webView: UIWebView ) {
+        loadingView.hidden = true
+    }
 
     
 

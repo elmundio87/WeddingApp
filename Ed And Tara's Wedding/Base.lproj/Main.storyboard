@@ -23,16 +23,42 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
+                            <view alpha="0.5" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gh3-vD-qUn">
+                                <rect key="frame" x="100" y="222" width="120" height="113"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mNo-NF-FhJ">
+                                        <rect key="frame" x="42" y="20" width="37" height="37"/>
+                                        <animations/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etR-Ic-1v5">
+                                        <rect key="frame" x="20" y="72" width="80" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="mNo-NF-FhJ" firstAttribute="centerX" secondItem="gh3-vD-qUn" secondAttribute="centerX" id="9eg-ju-i7H"/>
+                                    <constraint firstAttribute="width" constant="171" id="SFM-dA-S77"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gh3-vD-qUn" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="3Hs-ue-abx"/>
+                            <constraint firstItem="gh3-vD-qUn" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="SG9-aW-Za3"/>
+                            <constraint firstItem="etR-Ic-1v5" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="fru-KM-kXy"/>
                             <constraint firstItem="nbk-zS-uk0" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="qCm-Gv-j1O"/>
                             <constraint firstItem="nbk-zS-uk0" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" id="qDn-hq-STF"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="RSVP" image="Message-25.png" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="loadingView" destination="gh3-vD-qUn" id="kEE-vc-MwN"/>
                         <outlet property="webView" destination="nbk-zS-uk0" id="f4B-4V-YNn"/>
                     </connections>
                 </viewController>
