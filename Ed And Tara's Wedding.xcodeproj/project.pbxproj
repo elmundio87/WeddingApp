@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		48173A751BEFE1A40082E372 /* hatfield house.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48173A741BEFE1A40082E372 /* hatfield house.jpg */; };
+		48173A771BF0FAEF0082E372 /* Img320x568ptsPort@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48173A761BF0FAEF0082E372 /* Img320x568ptsPort@2x.png */; };
 		4817D9B21B63D0A70050CC8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4817D9B11B63D0A70050CC8A /* AppDelegate.swift */; };
 		4817D9B41B63D0A70050CC8A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4817D9B31B63D0A70050CC8A /* FirstViewController.swift */; };
 		4817D9B91B63D0A70050CC8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4817D9B71B63D0A70050CC8A /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		48173A741BEFE1A40082E372 /* hatfield house.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "hatfield house.jpg"; path = "Ed And Tara's Wedding/hatfield house.jpg"; sourceTree = "<group>"; };
+		48173A761BF0FAEF0082E372 /* Img320x568ptsPort@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Img320x568ptsPort@2x.png"; sourceTree = "<group>"; };
 		4817D9AC1B63D0A70050CC8A /* Ed And Tara's Wedding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ed And Tara's Wedding.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4817D9B01B63D0A70050CC8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4817D9B11B63D0A70050CC8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		4817D9AE1B63D0A70050CC8A /* Ed And Tara's Wedding */ = {
 			isa = PBXGroup;
 			children = (
+				48173A761BF0FAEF0082E372 /* Img320x568ptsPort@2x.png */,
 				48417D341BEF936400994918 /* map.png */,
 				4817D9B11B63D0A70050CC8A /* AppDelegate.swift */,
 				481E6EBE1BEDF75A00DEE347 /* MapViewController.swift */,
@@ -281,6 +284,7 @@
 				4817D9BB1B63D0A70050CC8A /* Images.xcassets in Resources */,
 				48417D261BEF53CF00994918 /* icon-120.png in Resources */,
 				48417D171BEF447B00994918 /* Ask Question-25.png in Resources */,
+				48173A771BF0FAEF0082E372 /* Img320x568ptsPort@2x.png in Resources */,
 				48417D181BEF447B00994918 /* Info-25.png in Resources */,
 				48417D291BEF53CF00994918 /* icon-180.png in Resources */,
 			);
