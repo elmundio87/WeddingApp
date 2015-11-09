@@ -17,8 +17,9 @@ class FirstViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var webView: UIWebView!
     var timer = NSTimer()
     let connectionTimeout = 20.0
+    var loaded = false;
     
-    var urlPath = "https://goo.gl/forms/M6g53EQEai"
+    var urlPath = "https://goo.gl/forms/p1u4pa2WgA"
     
     func loadAddressUrl() {
         let requestUrl = NSURL(string: urlPath)
@@ -26,12 +27,20 @@ class FirstViewController: UIViewController, UIWebViewDelegate {
         webView.loadRequest(request)
     }
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadingView.layer.cornerRadius = 10.0
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
         // Do any additional setup after loading the view, typically from a nib.
         webView.delegate = self
-        loadingView.layer.cornerRadius = 10.0
-        loadAddressUrl()
+        if(!loaded){
+            loadAddressUrl()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,6 +57,7 @@ class FirstViewController: UIViewController, UIWebViewDelegate {
 
     
     func webViewDidFinishLoad(webView: UIWebView ) {
+        loaded = true
         loadingView.hidden = true
         timer.invalidate()
     }
@@ -61,6 +71,7 @@ class FirstViewController: UIViewController, UIWebViewDelegate {
         loadingView.hidden = true
         refreshButton.hidden = false
         connectionTimeoutLabel.hidden = false
+        webView.loadRequest(NSURLRequest(URL: NSURL(string: "about:blank")!))
     }
     
 
