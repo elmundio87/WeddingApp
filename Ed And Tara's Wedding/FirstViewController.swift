@@ -26,8 +26,8 @@ class FirstViewController: UIViewController, UIWebViewDelegate {
         webView.loadRequest(request)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         // Do any additional setup after loading the view, typically from a nib.
         webView.delegate = self
         loadingView.layer.cornerRadius = 10.0
