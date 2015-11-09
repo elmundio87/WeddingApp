@@ -33,7 +33,7 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="hatfield house.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="yji-Z0-cbl">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="hatfield house.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="yji-Z0-cbl">
                     <rect key="frame" x="120" y="303" width="240" height="128"/>
                     <animations/>
                 </imageView>
