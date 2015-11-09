@@ -23,6 +23,15 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8j-51-2Af">
+                                <rect key="frame" x="127" y="269" width="65" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="refreshButtonTouchUpInside:" destination="9pv-A4-QxB" eventType="touchUpInside" id="HxI-5n-Z4b"/>
+                                </connections>
+                            </button>
                             <view alpha="0.5" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gh3-vD-qUn">
                                 <rect key="frame" x="100" y="222" width="120" height="113"/>
                                 <subviews>
@@ -45,12 +54,23 @@
                                     <constraint firstAttribute="width" constant="171" id="SFM-dA-S77"/>
                                 </constraints>
                             </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Connection timeout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peq-PA-En2">
+                                <rect key="frame" x="85" y="193" width="151" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gh3-vD-qUn" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="3Hs-ue-abx"/>
+                            <constraint firstItem="peq-PA-En2" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="EiP-SC-e1j"/>
+                            <constraint firstItem="y8j-51-2Af" firstAttribute="top" secondItem="peq-PA-En2" secondAttribute="bottom" constant="32" id="Kpx-ne-SIR"/>
+                            <constraint firstItem="y8j-51-2Af" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="NVE-xs-XwT"/>
                             <constraint firstItem="gh3-vD-qUn" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="SG9-aW-Za3"/>
+                            <constraint firstItem="peq-PA-En2" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="cpc-Oy-nEl"/>
                             <constraint firstItem="etR-Ic-1v5" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="fru-KM-kXy"/>
                             <constraint firstItem="nbk-zS-uk0" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="qCm-Gv-j1O"/>
                             <constraint firstItem="nbk-zS-uk0" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" id="qDn-hq-STF"/>
@@ -58,7 +78,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="RSVP" image="Message-25.png" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="connectionTimeoutLabel" destination="peq-PA-En2" id="SGd-4t-6TI"/>
                         <outlet property="loadingView" destination="gh3-vD-qUn" id="kEE-vc-MwN"/>
+                        <outlet property="refreshButton" destination="y8j-51-2Af" id="1xy-rZ-b3u"/>
                         <outlet property="webView" destination="nbk-zS-uk0" id="f4B-4V-YNn"/>
                     </connections>
                 </viewController>
