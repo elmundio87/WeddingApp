@@ -12,7 +12,6 @@ import AVFoundation
 
 class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate {
     
-    @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var scanButton: UIButton!
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
@@ -28,8 +27,8 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
         super.viewDidAppear(animated)
         
         if(NSUserDefaults.standardUserDefaults().boolForKey("password")){
-            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MainTabViewController") as UIViewController
-            self.presentViewController(viewController, animated: false, completion: nil)
+        //    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MainTabViewController") as UIViewController
+        //    self.presentViewController(viewController, animated: false, completion: nil)
         }
         
     }
@@ -96,7 +95,6 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
         view.layer.addSublayer(videoPreviewLayer!)
         
         captureSession?.startRunning()
-        view.bringSubviewToFront(messageLabel)
         
         // Initialize QR Code Frame to highlight the QR code
         qrCodeFrameView = UIView()
@@ -111,7 +109,6 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRectZero
-            messageLabel.text = "No QR code is detected"
             return
         }
         
@@ -124,7 +121,6 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
             qrCodeFrameView?.frame = barCodeObject.bounds;
             
             if metadataObj.stringValue != nil {
-                messageLabel.text = metadataObj.stringValue
                 tearDownVideo();
                 openSesame(metadataObj.stringValue);
             }

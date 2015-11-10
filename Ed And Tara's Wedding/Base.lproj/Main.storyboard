@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
@@ -328,27 +329,102 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQz-Ks-fLz">
-                                <rect key="frame" x="143" y="269" width="35" height="30"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JYD-1a-fL0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="278"/>
+                                <subviews>
+                                    <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="QR code.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="oOr-Qd-qng">
+                                        <rect key="frame" x="57" y="84" width="205" height="193"/>
+                                        <animations/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQz-Ks-fLz">
+                                        <rect key="frame" x="106" y="166" width="108" height="30"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Scan Barcode">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pressScanButton:" destination="3hM-Bs-RlL" eventType="touchUpInside" id="zir-JJ-Mct"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Please scan the barcode that was included with your invitation. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmr-zo-f36">
+                                        <rect key="frame" x="66" y="0.0" width="188" height="122"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <animations/>
-                                <state key="normal" title="Scan"/>
-                                <connections>
-                                    <action selector="pressScanButton:" destination="3hM-Bs-RlL" eventType="touchUpInside" id="zir-JJ-Mct"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="141-ka-ed1">
-                                <rect key="frame" x="136" y="28" width="42" height="21"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="oOr-Qd-qng" secondAttribute="bottom" id="10S-5J-MDK"/>
+                                    <constraint firstItem="Qmr-zo-f36" firstAttribute="top" secondItem="JYD-1a-fL0" secondAttribute="top" constant="20" id="8Ao-Wy-SML"/>
+                                    <constraint firstItem="oOr-Qd-qng" firstAttribute="top" secondItem="Qmr-zo-f36" secondAttribute="bottom" constant="20" id="8vo-pF-1PL"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qmr-zo-f36" secondAttribute="trailing" constant="66" id="Hom-2x-0Dx"/>
+                                    <constraint firstItem="JQz-Ks-fLz" firstAttribute="centerY" secondItem="oOr-Qd-qng" secondAttribute="centerY" id="II3-of-v53"/>
+                                    <constraint firstItem="Qmr-zo-f36" firstAttribute="centerX" secondItem="JYD-1a-fL0" secondAttribute="centerX" id="jTi-tt-aJw"/>
+                                    <constraint firstItem="JQz-Ks-fLz" firstAttribute="centerX" secondItem="oOr-Qd-qng" secondAttribute="centerX" id="mZo-Bc-m2p"/>
+                                    <constraint firstItem="oOr-Qd-qng" firstAttribute="centerX" secondItem="JYD-1a-fL0" secondAttribute="centerX" id="rG2-Ou-VEr"/>
+                                    <constraint firstItem="Qmr-zo-f36" firstAttribute="leading" secondItem="JYD-1a-fL0" secondAttribute="leading" constant="66" id="rrz-0s-Wer"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7wi-Z3-rOk">
+                                <rect key="frame" x="0.0" y="286" width="320" height="291"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qVb-5I-JuG">
+                                        <rect key="frame" x="70" y="131" width="180" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Alternatively, you can enter the password directly" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I55-cD-PXX">
+                                        <rect key="frame" x="68" y="35" width="184" height="73"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You will only need to do this once!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PO9-1V-pGW">
+                                        <rect key="frame" x="134" y="239" width="42" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="PO9-1V-pGW" secondAttribute="bottom" constant="31" id="0ua-jM-sjo"/>
+                                    <constraint firstItem="qVb-5I-JuG" firstAttribute="centerY" secondItem="7wi-Z3-rOk" secondAttribute="centerY" id="MJm-VI-wMD"/>
+                                    <constraint firstItem="qVb-5I-JuG" firstAttribute="leading" secondItem="7wi-Z3-rOk" secondAttribute="leading" constant="70" id="Sn9-vt-ckl"/>
+                                    <constraint firstItem="PO9-1V-pGW" firstAttribute="leading" secondItem="7wi-Z3-rOk" secondAttribute="leading" constant="100" id="TTB-2s-gEZ"/>
+                                    <constraint firstItem="I55-cD-PXX" firstAttribute="leading" secondItem="7wi-Z3-rOk" secondAttribute="leading" constant="68" id="X6N-c8-5ni"/>
+                                    <constraint firstItem="qVb-5I-JuG" firstAttribute="top" secondItem="I55-cD-PXX" secondAttribute="bottom" constant="23" id="YZP-pc-mnD"/>
+                                    <constraint firstItem="I55-cD-PXX" firstAttribute="centerX" secondItem="7wi-Z3-rOk" secondAttribute="centerX" id="bJQ-bH-GPP"/>
+                                    <constraint firstAttribute="trailing" secondItem="PO9-1V-pGW" secondAttribute="trailing" constant="100" id="kcX-5a-i2w"/>
+                                    <constraint firstAttribute="trailing" secondItem="I55-cD-PXX" secondAttribute="trailing" constant="68" id="uZf-ZZ-MBS"/>
+                                    <constraint firstAttribute="trailing" secondItem="qVb-5I-JuG" secondAttribute="trailing" constant="70" id="wMD-Zf-Pax"/>
+                                    <constraint firstItem="qVb-5I-JuG" firstAttribute="centerX" secondItem="7wi-Z3-rOk" secondAttribute="centerX" id="zoQ-fx-PrU"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7wi-Z3-rOk" firstAttribute="height" secondItem="YD8-qa-dzS" secondAttribute="height" multiplier="0.5" id="NnV-7S-JO5"/>
+                            <constraint firstItem="JYD-1a-fL0" firstAttribute="centerX" secondItem="YD8-qa-dzS" secondAttribute="centerX" id="Sza-Ye-fTf"/>
+                            <constraint firstItem="JYD-1a-fL0" firstAttribute="height" secondItem="YD8-qa-dzS" secondAttribute="height" multiplier="0.5" id="WjW-Y3-Y74"/>
+                            <constraint firstItem="7wi-Z3-rOk" firstAttribute="width" secondItem="YD8-qa-dzS" secondAttribute="width" id="eE3-o5-cw9"/>
+                            <constraint firstItem="JYD-1a-fL0" firstAttribute="top" secondItem="6cq-Cq-LNt" secondAttribute="bottom" id="eFA-oQ-C0c"/>
+                            <constraint firstItem="7wi-Z3-rOk" firstAttribute="centerX" secondItem="YD8-qa-dzS" secondAttribute="centerX" id="i6A-Yw-Jmd"/>
+                            <constraint firstItem="JYD-1a-fL0" firstAttribute="width" secondItem="YD8-qa-dzS" secondAttribute="width" id="jsV-WG-oLN"/>
+                            <constraint firstItem="5Wj-6F-iuz" firstAttribute="top" secondItem="7wi-Z3-rOk" secondAttribute="bottom" id="qtp-wC-aXg"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="messageLabel" destination="141-ka-ed1" id="LJB-Co-7gc"/>
                         <outlet property="scanButton" destination="JQz-Ks-fLz" id="4YC-eH-qUi"/>
                     </connections>
                 </viewController>
@@ -379,11 +455,26 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="xhr-zD-wsX">
+            <objects>
+                <viewController id="5zx-lJ-DAS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W9J-Pv-pZJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h3R-v9-9H2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="Ask Question-25.png" width="25" height="25"/>
         <image name="Domain-25.png" width="25" height="25"/>
         <image name="Message-25.png" width="25" height="25"/>
+        <image name="QR code.jpeg" width="300" height="300"/>
         <image name="Treasure Map-25.png" width="25" height="25"/>
     </resources>
 </document>
