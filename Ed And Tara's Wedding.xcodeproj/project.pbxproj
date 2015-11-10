@@ -34,6 +34,8 @@
 		48417D2C1BEF53CF00994918 /* silver-wedding-ring-clipart-silver-wedding-rings-clip-art-mn5gwdks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48417D241BEF53CF00994918 /* silver-wedding-ring-clipart-silver-wedding-rings-clip-art-mn5gwdks.jpg */; };
 		48417D2D1BEF53CF00994918 /* Wedding App Icon.psd in Resources */ = {isa = PBXBuildFile; fileRef = 48417D251BEF53CF00994918 /* Wedding App Icon.psd */; };
 		48417D351BEF936400994918 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 48417D341BEF936400994918 /* map.png */; };
+		48A76BD41BF15C6000F4E86A /* Domain-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 48A76BD31BF15C6000F4E86A /* Domain-25.png */; };
+		48A76BD61BF15CBB00F4E86A /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A76BD51BF15CBB00F4E86A /* VenueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		48417D241BEF53CF00994918 /* silver-wedding-ring-clipart-silver-wedding-rings-clip-art-mn5gwdks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "silver-wedding-ring-clipart-silver-wedding-rings-clip-art-mn5gwdks.jpg"; sourceTree = "<group>"; };
 		48417D251BEF53CF00994918 /* Wedding App Icon.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wedding App Icon.psd"; sourceTree = "<group>"; };
 		48417D341BEF936400994918 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		48A76BD31BF15C6000F4E86A /* Domain-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Domain-25.png"; sourceTree = "<group>"; };
+		48A76BD51BF15CBB00F4E86A /* VenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 				481E6EBE1BEDF75A00DEE347 /* MapViewController.swift */,
 				4817D9B31B63D0A70050CC8A /* FirstViewController.swift */,
 				481E6EBC1BEDEB2D00DEE347 /* InfoViewController.swift */,
+				48A76BD51BF15CBB00F4E86A /* VenueViewController.swift */,
 				4817D9B71B63D0A70050CC8A /* Main.storyboard */,
 				4817D9BA1B63D0A70050CC8A /* Images.xcassets */,
 				4817D9BC1B63D0A70050CC8A /* LaunchScreen.xib */,
@@ -140,6 +145,7 @@
 		4817D9AF1B63D0A70050CC8A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				48A76BD31BF15C6000F4E86A /* Domain-25.png */,
 				48417D1D1BEF53CF00994918 /* Wedding App Icon */,
 				48417D101BEF447B00994918 /* About-25.png */,
 				48417D111BEF447B00994918 /* Ask Question-25.png */,
@@ -274,6 +280,7 @@
 				481E6EBB1BEDEA2500DEE347 /* info.html in Resources */,
 				48417D281BEF53CF00994918 /* icon-167.png in Resources */,
 				48417D2D1BEF53CF00994918 /* Wedding App Icon.psd in Resources */,
+				48A76BD41BF15C6000F4E86A /* Domain-25.png in Resources */,
 				48417D2C1BEF53CF00994918 /* silver-wedding-ring-clipart-silver-wedding-rings-clip-art-mn5gwdks.jpg in Resources */,
 				48417D351BEF936400994918 /* map.png in Resources */,
 				48173A751BEFE1A40082E372 /* hatfield house.jpg in Resources */,
@@ -305,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4817D9B21B63D0A70050CC8A /* AppDelegate.swift in Sources */,
+				48A76BD61BF15CBB00F4E86A /* VenueViewController.swift in Sources */,
 				481E6EBD1BEDEB2D00DEE347 /* InfoViewController.swift in Sources */,
 				481E6EBF1BEDF75A00DEE347 /* MapViewController.swift in Sources */,
 				4817D9B41B63D0A70050CC8A /* FirstViewController.swift in Sources */,
