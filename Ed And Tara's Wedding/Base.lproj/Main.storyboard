@@ -327,9 +327,22 @@
                     <view key="view" contentMode="scaleToFill" id="YD8-qa-dzS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQz-Ks-fLz">
+                                <rect key="frame" x="143" y="269" width="35" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Scan"/>
+                                <connections>
+                                    <action selector="pressScanButton:" destination="3hM-Bs-RlL" eventType="touchUpInside" id="zir-JJ-Mct"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="scanButton" destination="JQz-Ks-fLz" id="4YC-eH-qUi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SB7-Xn-Tfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
