@@ -18,10 +18,45 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
     
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        
+    }
+    
     override func viewDidAppear(animated: Bool) {
+        
         super.viewDidAppear(animated)
-        //let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MainTabViewController") as UIViewController
-        //self.presentViewController(viewController, animated: false, completion: nil)
+        
+        if(NSUserDefaults.standardUserDefaults().boolForKey("password")){
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MainTabViewController") as UIViewController
+            self.presentViewController(viewController, animated: false, completion: nil)
+        }
+        
+    }
+    
+    func openSesame(password: String){
+        if(password == "ix8xyzc7"){
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "password")
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MainTabViewController") as UIViewController
+            self.presentViewController(viewController, animated: false, completion: nil)
+        }else{
+            
+            if #available(iOS 8.0, *) {
+                let alert =  UIAlertController(title: "Incorrect password", message:
+                        "Please enter the password included in your invitation", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style:.Default, handler: nil))
+                self.presentViewController(alert, animated: true){}
+                
+
+            } else {
+                let alert = UIAlertView()
+                alert.title = "Incorrect password"
+                alert.message = "Please enter the password included in your invitation"
+                alert.addButtonWithTitle("OK")
+                alert.show()
+            }
+            
+        }
     }
     
     @IBAction func pressScanButton(sender: AnyObject) {
@@ -90,7 +125,15 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
             
             if metadataObj.stringValue != nil {
                 messageLabel.text = metadataObj.stringValue
+                tearDownVideo();
+                openSesame(metadataObj.stringValue);
             }
         }
+    }
+    
+    func tearDownVideo(){
+        captureSession?.stopRunning()
+        videoPreviewLayer?.removeFromSuperlayer();
+        qrCodeFrameView?.removeFromSuperview();
     }
 }
