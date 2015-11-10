@@ -36,6 +36,7 @@
 		48417D351BEF936400994918 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 48417D341BEF936400994918 /* map.png */; };
 		48A76BD41BF15C6000F4E86A /* Domain-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 48A76BD31BF15C6000F4E86A /* Domain-25.png */; };
 		48A76BD61BF15CBB00F4E86A /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A76BD51BF15CBB00F4E86A /* VenueViewController.swift */; };
+		48A76BD81BF2146C00F4E86A /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A76BD71BF2146C00F4E86A /* PasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		48417D341BEF936400994918 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		48A76BD31BF15C6000F4E86A /* Domain-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Domain-25.png"; sourceTree = "<group>"; };
 		48A76BD51BF15CBB00F4E86A /* VenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
+		48A76BD71BF2146C00F4E86A /* PasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				481E6EBE1BEDF75A00DEE347 /* MapViewController.swift */,
 				4817D9B31B63D0A70050CC8A /* FirstViewController.swift */,
 				481E6EBC1BEDEB2D00DEE347 /* InfoViewController.swift */,
+				48A76BD71BF2146C00F4E86A /* PasswordViewController.swift */,
 				48A76BD51BF15CBB00F4E86A /* VenueViewController.swift */,
 				4817D9B71B63D0A70050CC8A /* Main.storyboard */,
 				4817D9BA1B63D0A70050CC8A /* Images.xcassets */,
@@ -313,6 +316,7 @@
 			files = (
 				4817D9B21B63D0A70050CC8A /* AppDelegate.swift in Sources */,
 				48A76BD61BF15CBB00F4E86A /* VenueViewController.swift in Sources */,
+				48A76BD81BF2146C00F4E86A /* PasswordViewController.swift in Sources */,
 				481E6EBD1BEDEB2D00DEE347 /* InfoViewController.swift in Sources */,
 				481E6EBF1BEDF75A00DEE347 /* MapViewController.swift in Sources */,
 				4817D9B41B63D0A70050CC8A /* FirstViewController.swift in Sources */,
