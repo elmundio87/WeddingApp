@@ -336,11 +336,19 @@
                                     <action selector="pressScanButton:" destination="3hM-Bs-RlL" eventType="touchUpInside" id="zir-JJ-Mct"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="141-ka-ed1">
+                                <rect key="frame" x="136" y="28" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="messageLabel" destination="141-ka-ed1" id="LJB-Co-7gc"/>
                         <outlet property="scanButton" destination="JQz-Ks-fLz" id="4YC-eH-qUi"/>
                     </connections>
                 </viewController>
