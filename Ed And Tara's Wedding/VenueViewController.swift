@@ -12,6 +12,9 @@ import UIKit
 class VenueViewController: UIViewController, UIWebViewDelegate {
     
 
+    @IBOutlet weak var openInSafariButton: UIBarButtonItem!
+    @IBOutlet weak var forwardButton: UIBarButtonItem!
+    @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var connectionTimeoutLabel: UILabel!
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var webView: UIWebView!
@@ -65,19 +68,32 @@ class VenueViewController: UIViewController, UIWebViewDelegate {
     }
     
     func webViewDidStartLoad(webView: UIWebView) {
-    
-        loadingView.hidden = false
-        timer = NSTimer.scheduledTimerWithTimeInterval(connectionTimeout, target: self, selector: "cancelWeb:", userInfo: nil, repeats: false)
+        if(!loaded){
+            loadingView.hidden = false
+            timer = NSTimer.scheduledTimerWithTimeInterval(connectionTimeout, target: self, selector: "cancelWeb:", userInfo: nil, repeats: false)
+        }
     }
     
     func cancelWeb(timer: NSTimer){
         if(!loaded){
-        loadingView.hidden = true
-        refreshButton.hidden = false
-        connectionTimeoutLabel.hidden = false
-        webView.loadRequest(NSURLRequest(URL: NSURL(string: "about:blank")!))
+            loadingView.hidden = true
+            refreshButton.hidden = false
+            connectionTimeoutLabel.hidden = false
+            webView.loadRequest(NSURLRequest(URL: NSURL(string: "about:blank")!))
         }
     }
   
+    @IBAction func openInSafari(){
+        let url = NSURL(string: urlPath)
+        UIApplication.sharedApplication().openURL(url!)
+    }
+    
+    @IBAction func goBackButton(){
+        webView.goBack()
+    }
+    
+    @IBAction func goForwardButton(){
+        webView.goForward()
+    }
     
 }

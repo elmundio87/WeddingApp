@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--RSVP-->
@@ -217,15 +218,47 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLz-i3-K5Y">
+                                <rect key="frame" x="0.0" y="475" width="320" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="BeM-uX-ALZ"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem id="ciF-gy-SfD">
+                                        <leftBarButtonItems>
+                                            <barButtonItem title="&lt;" id="Ffb-Wj-Zkb">
+                                                <connections>
+                                                    <action selector="goBackButton" destination="gWs-TL-2CB" id="2Yq-qT-C17"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="   " id="owd-Bx-7Zp"/>
+                                            <barButtonItem title="&gt;" id="Nza-Fv-hfb">
+                                                <connections>
+                                                    <action selector="goForwardButton" destination="gWs-TL-2CB" id="wmm-ab-Grf"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </leftBarButtonItems>
+                                        <barButtonItem key="rightBarButtonItem" title="Open in Safari" style="done" id="dU7-44-lY9">
+                                            <connections>
+                                                <action selector="openInSafari" destination="gWs-TL-2CB" id="IWH-m6-bca"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="6qK-ne-vXh" firstAttribute="top" secondItem="wLz-i3-K5Y" secondAttribute="bottom" id="613-Ht-k2r"/>
                             <constraint firstItem="ivb-6r-Mhc" firstAttribute="bottom" secondItem="qZP-bh-2Ts" secondAttribute="top" constant="-32" id="Ane-dL-FkD"/>
                             <constraint firstItem="ivb-6r-Mhc" firstAttribute="centerX" secondItem="ayx-Bc-Fzl" secondAttribute="centerX" id="B4t-hI-Uft"/>
                             <constraint firstItem="xk9-mB-d1E" firstAttribute="height" secondItem="ayx-Bc-Fzl" secondAttribute="height" id="Qss-gO-Ovs"/>
                             <constraint firstItem="qZP-bh-2Ts" firstAttribute="centerX" secondItem="ayx-Bc-Fzl" secondAttribute="centerX" id="S3W-Ur-XCk"/>
+                            <constraint firstItem="wLz-i3-K5Y" firstAttribute="centerX" secondItem="ayx-Bc-Fzl" secondAttribute="centerX" id="U7N-EL-3oC"/>
                             <constraint firstItem="biy-fP-qhw" firstAttribute="centerX" secondItem="ayx-Bc-Fzl" secondAttribute="centerX" id="VGK-4p-5fb"/>
+                            <constraint firstItem="wLz-i3-K5Y" firstAttribute="width" secondItem="ayx-Bc-Fzl" secondAttribute="width" id="f1R-fv-vSN"/>
                             <constraint firstItem="biy-fP-qhw" firstAttribute="centerY" secondItem="ayx-Bc-Fzl" secondAttribute="centerY" id="f9w-pe-jwE"/>
                             <constraint firstItem="ivb-6r-Mhc" firstAttribute="centerY" secondItem="ayx-Bc-Fzl" secondAttribute="centerY" id="hDS-A8-ATF"/>
                             <constraint firstItem="xk9-mB-d1E" firstAttribute="width" secondItem="ayx-Bc-Fzl" secondAttribute="width" id="nPY-Ha-cDN"/>
@@ -234,8 +267,11 @@
                     <tabBarItem key="tabBarItem" title="Venue" image="Domain-25.png" id="Qz3-7T-tAd"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="backButton" destination="Ffb-Wj-Zkb" id="9Sn-Tz-lFo"/>
                         <outlet property="connectionTimeoutLabel" destination="ivb-6r-Mhc" id="hSp-RI-7f0"/>
+                        <outlet property="forwardButton" destination="Nza-Fv-hfb" id="cnA-20-wiB"/>
                         <outlet property="loadingView" destination="biy-fP-qhw" id="30y-2y-LPy"/>
+                        <outlet property="openInSafariButton" destination="dU7-44-lY9" id="ksd-7A-Q6d"/>
                         <outlet property="refreshButton" destination="qZP-bh-2Ts" id="7i9-B3-WyX"/>
                         <outlet property="webView" destination="xk9-mB-d1E" id="xed-V3-LDj"/>
                     </connections>
