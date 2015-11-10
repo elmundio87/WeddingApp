@@ -18,7 +18,7 @@ class VenueViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var refreshButton: UIButton!
     
     var timer = NSTimer()
-    let connectionTimeout = 20.0
+    let connectionTimeout = NSBundle.mainBundle().infoDictionary!["WebViewConnectionTimeout"] as! Double
     var loaded = false;
     
     var urlPath = "http://hatfield-house.co.uk"
@@ -65,15 +65,18 @@ class VenueViewController: UIViewController, UIWebViewDelegate {
     }
     
     func webViewDidStartLoad(webView: UIWebView) {
+    
         loadingView.hidden = false
         timer = NSTimer.scheduledTimerWithTimeInterval(connectionTimeout, target: self, selector: "cancelWeb:", userInfo: nil, repeats: false)
     }
     
     func cancelWeb(timer: NSTimer){
+        if(!loaded){
         loadingView.hidden = true
         refreshButton.hidden = false
         connectionTimeoutLabel.hidden = false
         webView.loadRequest(NSURLRequest(URL: NSURL(string: "about:blank")!))
+        }
     }
   
     

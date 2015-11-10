@@ -12,11 +12,12 @@ import QuartzCore
 class FirstViewController: UIViewController, UIWebViewDelegate {
 
     @IBOutlet weak var connectionTimeoutLabel: UILabel!
-    @IBOutlet weak var refreshButton: UIButton!
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var refreshButton: UIButton!
+    
     var timer = NSTimer()
-    let connectionTimeout = 20.0
+    let connectionTimeout = NSBundle.mainBundle().infoDictionary!["WebViewConnectionTimeout"] as! Double
     var loaded = false;
     
     var urlPath = "https://goo.gl/forms/p1u4pa2WgA"
