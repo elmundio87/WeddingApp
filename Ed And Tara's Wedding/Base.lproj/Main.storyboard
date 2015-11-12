@@ -363,12 +363,12 @@
                                     <constraint firstAttribute="bottom" secondItem="oOr-Qd-qng" secondAttribute="bottom" id="10S-5J-MDK"/>
                                     <constraint firstItem="Qmr-zo-f36" firstAttribute="top" secondItem="JYD-1a-fL0" secondAttribute="top" constant="20" id="8Ao-Wy-SML"/>
                                     <constraint firstItem="oOr-Qd-qng" firstAttribute="top" secondItem="Qmr-zo-f36" secondAttribute="bottom" constant="20" id="8vo-pF-1PL"/>
-                                    <constraint firstAttribute="trailing" secondItem="Qmr-zo-f36" secondAttribute="trailing" constant="66" id="Hom-2x-0Dx"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qmr-zo-f36" secondAttribute="trailing" constant="10" id="Hom-2x-0Dx"/>
                                     <constraint firstItem="JQz-Ks-fLz" firstAttribute="centerY" secondItem="oOr-Qd-qng" secondAttribute="centerY" id="II3-of-v53"/>
                                     <constraint firstItem="Qmr-zo-f36" firstAttribute="centerX" secondItem="JYD-1a-fL0" secondAttribute="centerX" id="jTi-tt-aJw"/>
                                     <constraint firstItem="JQz-Ks-fLz" firstAttribute="centerX" secondItem="oOr-Qd-qng" secondAttribute="centerX" id="mZo-Bc-m2p"/>
                                     <constraint firstItem="oOr-Qd-qng" firstAttribute="centerX" secondItem="JYD-1a-fL0" secondAttribute="centerX" id="rG2-Ou-VEr"/>
-                                    <constraint firstItem="Qmr-zo-f36" firstAttribute="leading" secondItem="JYD-1a-fL0" secondAttribute="leading" constant="66" id="rrz-0s-Wer"/>
+                                    <constraint firstItem="Qmr-zo-f36" firstAttribute="leading" secondItem="JYD-1a-fL0" secondAttribute="leading" constant="10" id="rrz-0s-Wer"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7wi-Z3-rOk">
@@ -411,11 +411,11 @@
                                     <constraint firstItem="amK-tg-ZJr" firstAttribute="leading" secondItem="7wi-Z3-rOk" secondAttribute="leading" constant="95" id="I8f-ja-AxV"/>
                                     <constraint firstItem="I55-cD-PXX" firstAttribute="top" secondItem="7wi-Z3-rOk" secondAttribute="top" constant="35" id="MpV-rr-dBE"/>
                                     <constraint firstItem="amK-tg-ZJr" firstAttribute="centerY" secondItem="7wi-Z3-rOk" secondAttribute="centerY" id="PtJ-6t-47K"/>
-                                    <constraint firstItem="PO9-1V-pGW" firstAttribute="leading" secondItem="7wi-Z3-rOk" secondAttribute="leading" constant="100" id="TTB-2s-gEZ"/>
-                                    <constraint firstItem="I55-cD-PXX" firstAttribute="leading" secondItem="7wi-Z3-rOk" secondAttribute="leading" constant="68" id="X6N-c8-5ni"/>
+                                    <constraint firstItem="PO9-1V-pGW" firstAttribute="leading" secondItem="7wi-Z3-rOk" secondAttribute="leading" constant="10" id="TTB-2s-gEZ"/>
+                                    <constraint firstItem="I55-cD-PXX" firstAttribute="leading" secondItem="7wi-Z3-rOk" secondAttribute="leading" constant="10" id="X6N-c8-5ni"/>
                                     <constraint firstItem="I55-cD-PXX" firstAttribute="centerX" secondItem="7wi-Z3-rOk" secondAttribute="centerX" id="bJQ-bH-GPP"/>
-                                    <constraint firstAttribute="trailing" secondItem="PO9-1V-pGW" secondAttribute="trailing" constant="100" id="kcX-5a-i2w"/>
-                                    <constraint firstAttribute="trailing" secondItem="I55-cD-PXX" secondAttribute="trailing" constant="68" id="uZf-ZZ-MBS"/>
+                                    <constraint firstAttribute="trailing" secondItem="PO9-1V-pGW" secondAttribute="trailing" constant="10" id="kcX-5a-i2w"/>
+                                    <constraint firstAttribute="trailing" secondItem="I55-cD-PXX" secondAttribute="trailing" constant="10" id="uZf-ZZ-MBS"/>
                                     <constraint firstAttribute="trailing" secondItem="amK-tg-ZJr" secondAttribute="trailing" constant="95" id="yWp-sn-eMz"/>
                                 </constraints>
                             </view>
