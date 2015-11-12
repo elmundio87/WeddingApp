@@ -5,7 +5,7 @@
 	<key>RSVP_URL</key>
 	<string>https://docs.google.com/forms/d/1wcI79U_bRPTzfLr-6wnKSL-WG2ZDX72djELdK7HIZ88/viewform?entry.1357434392&amp;entry.45670494=0&amp;entry.924275645</string>
 	<key>WebViewConnectionTimeout</key>
-	<integer>30</integer>
+	<integer>5</integer>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

@@ -62,25 +62,29 @@ class VenueViewController: UIViewController, UIWebViewDelegate {
     
     
     func webViewDidFinishLoad(webView: UIWebView ) {
-        loaded = true
         loadingView.hidden = true
         timer.invalidate()
+        
+        if(webView.hidden){
+            let animation:CATransition = CATransition()
+            animation.type = kCATransitionFade
+            animation.duration = 0.7;
+            webView.layer.addAnimation(animation, forKey:nil)
+            webView.hidden = false
+        }
     }
     
     func webViewDidStartLoad(webView: UIWebView) {
-        if(!loaded){
-            loadingView.hidden = false
-            timer = NSTimer.scheduledTimerWithTimeInterval(connectionTimeout, target: self, selector: "cancelWeb:", userInfo: nil, repeats: false)
-        }
+       loadingView.hidden = false
+       timer = NSTimer.scheduledTimerWithTimeInterval(connectionTimeout, target: self, selector: "cancelWeb:", userInfo: nil, repeats: false)
+        
     }
     
     func cancelWeb(timer: NSTimer){
-        if(!loaded){
-            loadingView.hidden = true
-            refreshButton.hidden = false
-            connectionTimeoutLabel.hidden = false
-            webView.loadRequest(NSURLRequest(URL: NSURL(string: "about:blank")!))
-        }
+        loadingView.hidden = true
+        refreshButton.hidden = false
+        connectionTimeoutLabel.hidden = false
+        webView.loadRequest(NSURLRequest(URL: NSURL(string: "about:blank")!))
     }
   
     @IBAction func openInSafari(){
