@@ -18,6 +18,9 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
     
+    var savePassword = NSBundle.mainBundle().infoDictionary!["SavePassword"] as! Bool
+
+    
     override func viewDidLoad(){
         super.viewDidLoad()
         
@@ -27,9 +30,9 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
         
         super.viewDidAppear(animated)
         
-        if(NSUserDefaults.standardUserDefaults().boolForKey("password")){
-        //    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MainTabViewController") as UIViewController
-        //    self.presentViewController(viewController, animated: false, completion: nil)
+        if(NSUserDefaults.standardUserDefaults().boolForKey("password") && savePassword){
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MainTabViewController") as UIViewController
+            self.presentViewController(viewController, animated: false, completion: nil)
         }
         
     }
