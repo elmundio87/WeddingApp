@@ -20,7 +20,7 @@ class FirstViewController: UIViewController, UIWebViewDelegate {
     let connectionTimeout = NSBundle.mainBundle().infoDictionary!["WebViewConnectionTimeout"] as! Double
     var loaded = false;
     
-    var urlPath = "https://goo.gl/forms/p1u4pa2WgA"
+    var urlPath = NSBundle.mainBundle().infoDictionary!["RSVP_URL"] as! String
     
     func loadAddressUrl() {
         let requestUrl = NSURL(string: urlPath)

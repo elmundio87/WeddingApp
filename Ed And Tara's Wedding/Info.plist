@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>RSVP_URL</key>
+	<string>https://docs.google.com/forms/d/1wcI79U_bRPTzfLr-6wnKSL-WG2ZDX72djELdK7HIZ88/viewform?entry.1357434392&amp;entry.45670494=0&amp;entry.924275645</string>
 	<key>WebViewConnectionTimeout</key>
 	<integer>30</integer>
 	<key>CFBundleDevelopmentRegion</key>
