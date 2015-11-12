@@ -9,7 +9,7 @@
 import UIKit
 import QuartzCore
 
-class FirstViewController: UIViewController, UIWebViewDelegate {
+class RSVPViewController: UIViewController, UIWebViewDelegate {
 
     @IBOutlet weak var connectionTimeoutLabel: UILabel!
     @IBOutlet weak var loadingView: UIView!

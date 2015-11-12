@@ -10,7 +10,7 @@
         <!--RSVP-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Ed_And_Tara_s_Wedding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="RSVPViewController" customModule="Ed_And_Tara_s_Wedding" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zZF-0P-N8M"/>
                         <viewControllerLayoutGuide type="bottom" id="otD-Nb-yVy"/>

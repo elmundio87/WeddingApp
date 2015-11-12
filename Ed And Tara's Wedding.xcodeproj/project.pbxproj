@@ -11,7 +11,7 @@
 		48173A751BEFE1A40082E372 /* hatfield house.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48173A741BEFE1A40082E372 /* hatfield house.jpg */; };
 		48173A771BF0FAEF0082E372 /* Img320x568ptsPort@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48173A761BF0FAEF0082E372 /* Img320x568ptsPort@2x.png */; };
 		4817D9B21B63D0A70050CC8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4817D9B11B63D0A70050CC8A /* AppDelegate.swift */; };
-		4817D9B41B63D0A70050CC8A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4817D9B31B63D0A70050CC8A /* FirstViewController.swift */; };
+		4817D9B41B63D0A70050CC8A /* RSVPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4817D9B31B63D0A70050CC8A /* RSVPViewController.swift */; };
 		4817D9B91B63D0A70050CC8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4817D9B71B63D0A70050CC8A /* Main.storyboard */; };
 		4817D9BB1B63D0A70050CC8A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4817D9BA1B63D0A70050CC8A /* Images.xcassets */; };
 		4817D9BE1B63D0A70050CC8A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4817D9BC1B63D0A70050CC8A /* LaunchScreen.xib */; };
@@ -58,7 +58,7 @@
 		4817D9AC1B63D0A70050CC8A /* Ed And Tara's Wedding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ed And Tara's Wedding.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4817D9B01B63D0A70050CC8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4817D9B11B63D0A70050CC8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4817D9B31B63D0A70050CC8A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		4817D9B31B63D0A70050CC8A /* RSVPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSVPViewController.swift; sourceTree = "<group>"; };
 		4817D9B81B63D0A70050CC8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4817D9BA1B63D0A70050CC8A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4817D9BD1B63D0A70050CC8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 				48417D341BEF936400994918 /* map.png */,
 				4817D9B11B63D0A70050CC8A /* AppDelegate.swift */,
 				481E6EBE1BEDF75A00DEE347 /* MapViewController.swift */,
-				4817D9B31B63D0A70050CC8A /* FirstViewController.swift */,
+				4817D9B31B63D0A70050CC8A /* RSVPViewController.swift */,
 				481E6EBC1BEDEB2D00DEE347 /* InfoViewController.swift */,
 				48A76BD71BF2146C00F4E86A /* PasswordViewController.swift */,
 				48A76BD51BF15CBB00F4E86A /* VenueViewController.swift */,
@@ -327,7 +327,7 @@
 				48A76BD81BF2146C00F4E86A /* PasswordViewController.swift in Sources */,
 				481E6EBD1BEDEB2D00DEE347 /* InfoViewController.swift in Sources */,
 				481E6EBF1BEDF75A00DEE347 /* MapViewController.swift in Sources */,
-				4817D9B41B63D0A70050CC8A /* FirstViewController.swift in Sources */,
+				4817D9B41B63D0A70050CC8A /* RSVPViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
