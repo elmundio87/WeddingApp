@@ -13,6 +13,8 @@ import AVFoundation
 class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate {
     
     @IBOutlet weak var scanButton: UIButton!
+    @IBOutlet weak var passwordButton: UIButton!
+    
     @IBOutlet var passwordField: UITextField?
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
@@ -23,6 +25,8 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        scanButton.layer.cornerRadius = 10.0
+        passwordButton.layer.cornerRadius = 10.0
         
     }
     

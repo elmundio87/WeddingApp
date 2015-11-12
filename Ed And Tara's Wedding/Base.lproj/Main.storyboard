@@ -340,7 +340,8 @@
                                         <rect key="frame" x="106" y="166" width="108" height="30"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Scan Barcode">
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Scan">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -391,6 +392,7 @@
                                         <rect key="frame" x="85" y="131" width="150" height="30"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Enter Password">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -432,6 +434,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="passwordButton" destination="amK-tg-ZJr" id="McN-Bq-wiO"/>
                         <outlet property="scanButton" destination="JQz-Ks-fLz" id="4YC-eH-qUi"/>
                     </connections>
                 </viewController>
