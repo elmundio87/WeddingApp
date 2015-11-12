@@ -145,18 +145,9 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
             
             if metadataObj.stringValue != nil {
                 openSesame(metadataObj.stringValue);
-                tearDownVideo();
             }
         }
     }
-    
-    func tearDownVideo(){
-        captureSession?.stopRunning()
-        videoPreviewLayer?.removeFromSuperlayer();
-        qrCodeFrameView?.removeFromSuperview();
-    }
-    
-    
  
     @IBAction func touchPasswordTextbox(sender: AnyObject){
         
