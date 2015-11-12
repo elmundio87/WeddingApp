@@ -41,8 +41,15 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
         
     }
     
+    func validatePassWord(password: String) -> Bool{
+        let data = NSData(base64EncodedString: "U1RBUldBUlNEQVk=", options: NSDataBase64DecodingOptions(rawValue: 0))
+        let base64Decoded = NSString(data: data!, encoding: NSUTF8StringEncoding)
+        return (base64Decoded == password)
+       
+    }
+    
     func openSesame(password: String){
-        if(password == "ix8xyzc7"){
+        if(validatePassWord(password)){
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "password")
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MainTabViewController") as UIViewController
             self.presentViewController(viewController, animated: false, completion: nil)
