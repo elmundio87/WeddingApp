@@ -3,7 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
@@ -329,113 +329,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JYD-1a-fL0">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="278"/>
-                                <subviews>
-                                    <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="QR code.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="oOr-Qd-qng">
-                                        <rect key="frame" x="57" y="84" width="205" height="193"/>
-                                        <animations/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQz-Ks-fLz">
-                                        <rect key="frame" x="106" y="166" width="108" height="30"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <state key="normal" title="Scan">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pressScanButton:" destination="3hM-Bs-RlL" eventType="touchUpInside" id="zir-JJ-Mct"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Please scan the barcode that was included with your invitation. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmr-zo-f36">
-                                        <rect key="frame" x="66" y="0.0" width="188" height="122"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Point the camera at your invitation to scan the barcode. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFN-CP-0nI">
+                                <rect key="frame" x="9" y="53" width="303" height="21"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="oOr-Qd-qng" secondAttribute="bottom" id="10S-5J-MDK"/>
-                                    <constraint firstItem="Qmr-zo-f36" firstAttribute="top" secondItem="JYD-1a-fL0" secondAttribute="top" constant="20" id="8Ao-Wy-SML"/>
-                                    <constraint firstItem="oOr-Qd-qng" firstAttribute="top" secondItem="Qmr-zo-f36" secondAttribute="bottom" constant="20" id="8vo-pF-1PL"/>
-                                    <constraint firstAttribute="trailing" secondItem="Qmr-zo-f36" secondAttribute="trailing" constant="10" id="Hom-2x-0Dx"/>
-                                    <constraint firstItem="JQz-Ks-fLz" firstAttribute="centerY" secondItem="oOr-Qd-qng" secondAttribute="centerY" id="II3-of-v53"/>
-                                    <constraint firstItem="Qmr-zo-f36" firstAttribute="centerX" secondItem="JYD-1a-fL0" secondAttribute="centerX" id="jTi-tt-aJw"/>
-                                    <constraint firstItem="JQz-Ks-fLz" firstAttribute="centerX" secondItem="oOr-Qd-qng" secondAttribute="centerX" id="mZo-Bc-m2p"/>
-                                    <constraint firstItem="oOr-Qd-qng" firstAttribute="centerX" secondItem="JYD-1a-fL0" secondAttribute="centerX" id="rG2-Ou-VEr"/>
-                                    <constraint firstItem="Qmr-zo-f36" firstAttribute="leading" secondItem="JYD-1a-fL0" secondAttribute="leading" constant="10" id="rrz-0s-Wer"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7wi-Z3-rOk">
-                                <rect key="frame" x="0.0" y="286" width="320" height="291"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Alternatively, you can enter the password directly" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I55-cD-PXX">
-                                        <rect key="frame" x="68" y="35" width="184" height="73"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You will only need to do this once!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PO9-1V-pGW">
-                                        <rect key="frame" x="134" y="239" width="42" height="21"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amK-tg-ZJr">
-                                        <rect key="frame" x="85" y="131" width="150" height="30"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Enter Password">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="touchPasswordTextbox:" destination="3hM-Bs-RlL" eventType="touchUpInside" id="lZq-SP-Zbp"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amK-tg-ZJr">
+                                <rect key="frame" x="59" y="431" width="202" height="34"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="PO9-1V-pGW" secondAttribute="bottom" constant="31" id="0ua-jM-sjo"/>
-                                    <constraint firstItem="amK-tg-ZJr" firstAttribute="centerX" secondItem="7wi-Z3-rOk" secondAttribute="centerX" id="HG5-Le-ihX"/>
-                                    <constraint firstItem="amK-tg-ZJr" firstAttribute="leading" secondItem="7wi-Z3-rOk" secondAttribute="leading" constant="95" id="I8f-ja-AxV"/>
-                                    <constraint firstItem="I55-cD-PXX" firstAttribute="top" secondItem="7wi-Z3-rOk" secondAttribute="top" constant="35" id="MpV-rr-dBE"/>
-                                    <constraint firstItem="amK-tg-ZJr" firstAttribute="centerY" secondItem="7wi-Z3-rOk" secondAttribute="centerY" id="PtJ-6t-47K"/>
-                                    <constraint firstItem="PO9-1V-pGW" firstAttribute="leading" secondItem="7wi-Z3-rOk" secondAttribute="leading" constant="10" id="TTB-2s-gEZ"/>
-                                    <constraint firstItem="I55-cD-PXX" firstAttribute="leading" secondItem="7wi-Z3-rOk" secondAttribute="leading" constant="10" id="X6N-c8-5ni"/>
-                                    <constraint firstItem="I55-cD-PXX" firstAttribute="centerX" secondItem="7wi-Z3-rOk" secondAttribute="centerX" id="bJQ-bH-GPP"/>
-                                    <constraint firstAttribute="trailing" secondItem="PO9-1V-pGW" secondAttribute="trailing" constant="10" id="kcX-5a-i2w"/>
-                                    <constraint firstAttribute="trailing" secondItem="I55-cD-PXX" secondAttribute="trailing" constant="10" id="uZf-ZZ-MBS"/>
-                                    <constraint firstAttribute="trailing" secondItem="amK-tg-ZJr" secondAttribute="trailing" constant="95" id="yWp-sn-eMz"/>
-                                </constraints>
-                            </view>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Enter password manually">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchPasswordTextbox:" destination="3hM-Bs-RlL" eventType="touchUpInside" id="lZq-SP-Zbp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="If you don't have your invitation to hand, you can still type the password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PO9-1V-pGW">
+                                <rect key="frame" x="139" y="369" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7wi-Z3-rOk" firstAttribute="height" secondItem="YD8-qa-dzS" secondAttribute="height" multiplier="0.5" id="NnV-7S-JO5"/>
-                            <constraint firstItem="JYD-1a-fL0" firstAttribute="centerX" secondItem="YD8-qa-dzS" secondAttribute="centerX" id="Sza-Ye-fTf"/>
-                            <constraint firstItem="JYD-1a-fL0" firstAttribute="height" secondItem="YD8-qa-dzS" secondAttribute="height" multiplier="0.5" id="WjW-Y3-Y74"/>
-                            <constraint firstItem="7wi-Z3-rOk" firstAttribute="width" secondItem="YD8-qa-dzS" secondAttribute="width" id="eE3-o5-cw9"/>
-                            <constraint firstItem="JYD-1a-fL0" firstAttribute="top" secondItem="6cq-Cq-LNt" secondAttribute="bottom" id="eFA-oQ-C0c"/>
-                            <constraint firstItem="7wi-Z3-rOk" firstAttribute="centerX" secondItem="YD8-qa-dzS" secondAttribute="centerX" id="i6A-Yw-Jmd"/>
-                            <constraint firstItem="JYD-1a-fL0" firstAttribute="width" secondItem="YD8-qa-dzS" secondAttribute="width" id="jsV-WG-oLN"/>
-                            <constraint firstItem="5Wj-6F-iuz" firstAttribute="top" secondItem="7wi-Z3-rOk" secondAttribute="bottom" id="qtp-wC-aXg"/>
+                            <constraint firstItem="5Wj-6F-iuz" firstAttribute="top" secondItem="amK-tg-ZJr" secondAttribute="bottom" constant="100" id="4ah-A4-N2o"/>
+                            <constraint firstItem="amK-tg-ZJr" firstAttribute="leading" secondItem="YD8-qa-dzS" secondAttribute="leadingMargin" constant="40" id="5EF-vn-JAW"/>
+                            <constraint firstItem="nFN-CP-0nI" firstAttribute="leading" secondItem="YD8-qa-dzS" secondAttribute="leadingMargin" constant="20" id="C1x-Xe-IpC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PO9-1V-pGW" secondAttribute="trailing" constant="20" id="VAc-uQ-SAg"/>
+                            <constraint firstItem="nFN-CP-0nI" firstAttribute="top" secondItem="6cq-Cq-LNt" secondAttribute="bottom" constant="50" id="iyL-4K-wJD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nFN-CP-0nI" secondAttribute="trailing" constant="20" id="j0x-gh-t6D"/>
+                            <constraint firstItem="PO9-1V-pGW" firstAttribute="leading" secondItem="YD8-qa-dzS" secondAttribute="leadingMargin" constant="20" id="mcf-3y-QWw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="amK-tg-ZJr" secondAttribute="trailing" constant="40" id="oCv-LI-dYC"/>
+                            <constraint firstItem="amK-tg-ZJr" firstAttribute="top" secondItem="PO9-1V-pGW" secondAttribute="bottom" constant="40" id="snj-KM-jf5"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="manualPasswordLabel" destination="PO9-1V-pGW" id="lr3-zK-1ao"/>
+                        <outlet property="messageLabel" destination="nFN-CP-0nI" id="kWz-Nx-Hvr"/>
                         <outlet property="passwordButton" destination="amK-tg-ZJr" id="McN-Bq-wiO"/>
-                        <outlet property="scanButton" destination="JQz-Ks-fLz" id="4YC-eH-qUi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SB7-Xn-Tfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -488,7 +429,6 @@
         <image name="Ask Question-25.png" width="25" height="25"/>
         <image name="Domain-25.png" width="25" height="25"/>
         <image name="Message-25.png" width="25" height="25"/>
-        <image name="QR code.jpeg" width="300" height="300"/>
         <image name="Treasure Map-25.png" width="25" height="25"/>
     </resources>
 </document>

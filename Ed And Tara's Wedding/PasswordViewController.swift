@@ -12,7 +12,8 @@ import AVFoundation
 
 class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate {
     
-    @IBOutlet weak var scanButton: UIButton!
+    @IBOutlet weak var manualPasswordLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var passwordButton: UIButton!
     
     @IBOutlet var passwordField: UITextField?
@@ -25,7 +26,6 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        scanButton.layer.cornerRadius = 10.0
         passwordButton.layer.cornerRadius = 10.0
         
     }
@@ -37,6 +37,8 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
         if(NSUserDefaults.standardUserDefaults().boolForKey("password") && savePassword){
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MainTabViewController") as UIViewController
             self.presentViewController(viewController, animated: false, completion: nil)
+        }else{
+            startScanning()
         }
         
     }
@@ -73,7 +75,7 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
         }
     }
     
-    @IBAction func pressScanButton(sender: AnyObject) {
+    func startScanning() {
         
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video
         // as the media type parameter.
@@ -117,6 +119,12 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
         qrCodeFrameView?.layer.borderWidth = 2
         view.addSubview(qrCodeFrameView!)
         view.bringSubviewToFront(qrCodeFrameView!)
+        view.bringSubviewToFront(messageLabel)
+        view.bringSubviewToFront(passwordButton)
+        view.bringSubviewToFront(manualPasswordLabel)
+        messageLabel?.textColor = UIColor.whiteColor()
+        manualPasswordLabel?.textColor = UIColor.whiteColor()
+
     }
     
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
@@ -136,8 +144,8 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
             qrCodeFrameView?.frame = barCodeObject.bounds;
             
             if metadataObj.stringValue != nil {
-                tearDownVideo();
                 openSesame(metadataObj.stringValue);
+                tearDownVideo();
             }
         }
     }

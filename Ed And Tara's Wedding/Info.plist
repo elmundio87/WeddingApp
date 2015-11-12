@@ -61,7 +61,7 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>SavePassword</key>
-	<true/>
+	<false/>
 	<key>UILaunchImages</key>
 	<array>
 		<dict>
