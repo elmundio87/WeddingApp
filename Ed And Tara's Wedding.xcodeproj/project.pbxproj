@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4809CC3F1BF50D5C0051815A /* Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4809CC3E1BF50D5C0051815A /* Info-Debug.plist */; };
 		48173A751BEFE1A40082E372 /* hatfield house.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48173A741BEFE1A40082E372 /* hatfield house.jpg */; };
 		48173A771BF0FAEF0082E372 /* Img320x568ptsPort@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48173A761BF0FAEF0082E372 /* Img320x568ptsPort@2x.png */; };
 		4817D9B21B63D0A70050CC8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4817D9B11B63D0A70050CC8A /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4809CC3E1BF50D5C0051815A /* Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Debug.plist"; sourceTree = "<group>"; };
 		48173A741BEFE1A40082E372 /* hatfield house.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "hatfield house.jpg"; path = "Ed And Tara's Wedding/hatfield house.jpg"; sourceTree = "<group>"; };
 		48173A761BF0FAEF0082E372 /* Img320x568ptsPort@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Img320x568ptsPort@2x.png"; sourceTree = "<group>"; };
 		4817D9AC1B63D0A70050CC8A /* Ed And Tara's Wedding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ed And Tara's Wedding.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +162,7 @@
 				48417D141BEF447B00994918 /* Reply-25.png */,
 				48417D151BEF447B00994918 /* Treasure Map-25.png */,
 				4817D9B01B63D0A70050CC8A /* Info.plist */,
+				4809CC3E1BF50D5C0051815A /* Info-Debug.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				48417D2D1BEF53CF00994918 /* Wedding App Icon.psd in Resources */,
 				48A76BD41BF15C6000F4E86A /* Domain-25.png in Resources */,
 				48417D2C1BEF53CF00994918 /* silver-wedding-ring-clipart-silver-wedding-rings-clip-art-mn5gwdks.jpg in Resources */,
+				4809CC3F1BF50D5C0051815A /* Info-Debug.plist in Resources */,
 				48A76BDA1BF2411800F4E86A /* QR code.jpeg in Resources */,
 				48417D351BEF936400994918 /* map.png in Resources */,
 				48173A751BEFE1A40082E372 /* hatfield house.jpg in Resources */,
@@ -456,7 +460,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Ed And Tara's Wedding/Info.plist";
+				INFOPLIST_FILE = "Ed And Tara's Wedding/Info-Debug.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.elmundio.wedding.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
