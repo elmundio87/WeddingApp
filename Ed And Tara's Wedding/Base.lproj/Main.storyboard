@@ -373,12 +373,6 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7wi-Z3-rOk">
                                 <rect key="frame" x="0.0" y="286" width="320" height="291"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qVb-5I-JuG">
-                                        <rect key="frame" x="70" y="131" width="180" height="30"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Alternatively, you can enter the password directly" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I55-cD-PXX">
                                         <rect key="frame" x="68" y="35" width="184" height="73"/>
                                         <animations/>
@@ -398,22 +392,28 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="PO9-1V-pGW" secondAttribute="bottom" constant="31" id="0ua-jM-sjo"/>
-                                    <constraint firstItem="qVb-5I-JuG" firstAttribute="centerY" secondItem="7wi-Z3-rOk" secondAttribute="centerY" id="MJm-VI-wMD"/>
-                                    <constraint firstItem="qVb-5I-JuG" firstAttribute="leading" secondItem="7wi-Z3-rOk" secondAttribute="leading" constant="70" id="Sn9-vt-ckl"/>
+                                    <constraint firstItem="I55-cD-PXX" firstAttribute="top" secondItem="7wi-Z3-rOk" secondAttribute="top" constant="35" id="MpV-rr-dBE"/>
                                     <constraint firstItem="PO9-1V-pGW" firstAttribute="leading" secondItem="7wi-Z3-rOk" secondAttribute="leading" constant="100" id="TTB-2s-gEZ"/>
                                     <constraint firstItem="I55-cD-PXX" firstAttribute="leading" secondItem="7wi-Z3-rOk" secondAttribute="leading" constant="68" id="X6N-c8-5ni"/>
-                                    <constraint firstItem="qVb-5I-JuG" firstAttribute="top" secondItem="I55-cD-PXX" secondAttribute="bottom" constant="23" id="YZP-pc-mnD"/>
                                     <constraint firstItem="I55-cD-PXX" firstAttribute="centerX" secondItem="7wi-Z3-rOk" secondAttribute="centerX" id="bJQ-bH-GPP"/>
                                     <constraint firstAttribute="trailing" secondItem="PO9-1V-pGW" secondAttribute="trailing" constant="100" id="kcX-5a-i2w"/>
                                     <constraint firstAttribute="trailing" secondItem="I55-cD-PXX" secondAttribute="trailing" constant="68" id="uZf-ZZ-MBS"/>
-                                    <constraint firstAttribute="trailing" secondItem="qVb-5I-JuG" secondAttribute="trailing" constant="70" id="wMD-Zf-Pax"/>
-                                    <constraint firstItem="qVb-5I-JuG" firstAttribute="centerX" secondItem="7wi-Z3-rOk" secondAttribute="centerX" id="zoQ-fx-PrU"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amK-tg-ZJr">
+                                <rect key="frame" x="137" y="417" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="touchPasswordTextbox:" destination="3hM-Bs-RlL" eventType="touchUpInside" id="lZq-SP-Zbp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="amK-tg-ZJr" firstAttribute="centerX" secondItem="7wi-Z3-rOk" secondAttribute="centerX" id="0NB-TD-Gr9"/>
+                            <constraint firstItem="amK-tg-ZJr" firstAttribute="centerY" secondItem="7wi-Z3-rOk" secondAttribute="centerY" id="I8P-HK-GeW"/>
                             <constraint firstItem="7wi-Z3-rOk" firstAttribute="height" secondItem="YD8-qa-dzS" secondAttribute="height" multiplier="0.5" id="NnV-7S-JO5"/>
                             <constraint firstItem="JYD-1a-fL0" firstAttribute="centerX" secondItem="YD8-qa-dzS" secondAttribute="centerX" id="Sza-Ye-fTf"/>
                             <constraint firstItem="JYD-1a-fL0" firstAttribute="height" secondItem="YD8-qa-dzS" secondAttribute="height" multiplier="0.5" id="WjW-Y3-Y74"/>
@@ -459,6 +459,10 @@
         <scene sceneID="xhr-zD-wsX">
             <objects>
                 <viewController id="5zx-lJ-DAS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m1p-Qb-8xj"/>
+                        <viewControllerLayoutGuide type="bottom" id="fnU-U7-q0S"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="W9J-Pv-pZJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

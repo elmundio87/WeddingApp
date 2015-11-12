@@ -13,6 +13,7 @@ import AVFoundation
 class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate {
     
     @IBOutlet weak var scanButton: UIButton!
+    @IBOutlet var passwordField: UITextField?
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
@@ -132,4 +133,35 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
         videoPreviewLayer?.removeFromSuperlayer();
         qrCodeFrameView?.removeFromSuperview();
     }
-}
+    
+    
+ 
+    @IBAction func touchPasswordTextbox(sender: AnyObject){
+        
+        if #available(iOS 8.0, *) {
+        
+            func passwordEntered(alert: UIAlertAction){
+                let password = self.passwordField!.text
+                openSesame(password!)
+            }
+            
+        var alertController:UIAlertController?
+        alertController = UIAlertController(title: "Enter password",
+            message: "The password is included in your invitation",
+            preferredStyle: .Alert)
+            
+        alertController!.addTextFieldWithConfigurationHandler(
+            {(textField: UITextField!) in
+                self.passwordField = textField
+                textField.placeholder = "Enter the password"
+        })
+            
+         alertController!.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: passwordEntered))
+      
+        self.presentViewController(alertController!,
+            animated: true,
+            completion: nil)
+        }
+    
+        }
+    }
