@@ -56,7 +56,7 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
                 
 
             } else {
-                let alert = UIAlertView()
+                let alert: UIAlertView = UIAlertView()
                 alert.title = "Incorrect password"
                 alert.message = "Please enter the password included in your invitation"
                 alert.addButtonWithTitle("OK")
@@ -168,7 +168,22 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
         self.presentViewController(alertController!,
             animated: true,
             completion: nil)
-        }
-    
+        }else{
+            
+            func alertView(View: UIAlertView!, clickedButtonAtIndex buttonIndex: Int){
+              let password = View.textFieldAtIndex(0)!.text
+              openSesame(password!)
+            }
+            
+            let alert: UIAlertView = UIAlertView()
+            alert.delegate = self
+            alert.title = "Enter password"
+            alert.message = "The password is included in your invitation"
+            alert.addButtonWithTitle("OK")
+            alert.alertViewStyle = UIAlertViewStyle.PlainTextInput
+        
+            alert.show()
+
         }
     }
+}
