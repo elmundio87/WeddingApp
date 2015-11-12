@@ -62,6 +62,15 @@ class RSVPViewController: UIViewController, UIWebViewDelegate {
         loadingView.hidden = true
         timer.invalidate()
         webView.stringByEvaluatingJavaScriptFromString("document.getElementsByClassName('ss-footer')[0].style.display = 'none'")
+        
+        if(webView.hidden){
+            let animation:CATransition = CATransition()
+            animation.type = kCATransitionFade
+            animation.duration = 0.7;
+            webView.layer.addAnimation(animation, forKey:nil)
+            webView.hidden = false
+        }
+        
     }
 
     func webViewDidStartLoad(webView: UIWebView) {
