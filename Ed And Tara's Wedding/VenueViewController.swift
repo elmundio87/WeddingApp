@@ -20,10 +20,6 @@ class VenueViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var refreshButton: UIButton!
     
-    var timer = NSTimer()
-    let connectionTimeout = NSBundle.mainBundle().infoDictionary!["WebViewConnectionTimeout"] as! Double
-    var loaded = false;
-    
     var urlPath = "http://hatfield-house.co.uk"
     
     func loadAddressUrl() {
@@ -43,9 +39,7 @@ class VenueViewController: UIViewController, UIWebViewDelegate {
         
         // Do any additional setup after loading the view, typically from a nib.
         webView.delegate = self
-        if(!loaded){
-            loadAddressUrl()
-        }
+        loadAddressUrl()
     }
     
     override func didReceiveMemoryWarning() {
@@ -63,7 +57,6 @@ class VenueViewController: UIViewController, UIWebViewDelegate {
     
     func webViewDidFinishLoad(webView: UIWebView ) {
         loadingView.hidden = true
-        timer.invalidate()
         
         if(webView.hidden){
             let animation:CATransition = CATransition()
@@ -72,19 +65,6 @@ class VenueViewController: UIViewController, UIWebViewDelegate {
             webView.layer.addAnimation(animation, forKey:nil)
             webView.hidden = false
         }
-    }
-    
-    func webViewDidStartLoad(webView: UIWebView) {
-       loadingView.hidden = false
-       timer = NSTimer.scheduledTimerWithTimeInterval(connectionTimeout, target: self, selector: "cancelWeb:", userInfo: nil, repeats: false)
-        
-    }
-    
-    func cancelWeb(timer: NSTimer){
-        loadingView.hidden = true
-        refreshButton.hidden = false
-        connectionTimeoutLabel.hidden = false
-        webView.loadRequest(NSURLRequest(URL: NSURL(string: "about:blank")!))
     }
   
     @IBAction func openInSafari(){
