@@ -192,4 +192,8 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
 
         }
     }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return .Portrait
+    }
 }
