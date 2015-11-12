@@ -46,7 +46,7 @@ class PasswordViewController: UIViewController,AVCaptureMetadataOutputObjectsDel
     func validatePassWord(password: String) -> Bool{
         let data = NSData(base64EncodedString: "U1RBUldBUlNEQVk=", options: NSDataBase64DecodingOptions(rawValue: 0))
         let base64Decoded = NSString(data: data!, encoding: NSUTF8StringEncoding)
-        return (base64Decoded == password)
+        return (base64Decoded == password.uppercaseString)
        
     }
     
